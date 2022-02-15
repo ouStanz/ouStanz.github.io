@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>GitHub操作文档 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="一、基础操作1、克隆远端文件1git clone  2、把文件添加到本地版本库1git add  3、提交修改12把对文件的修改提交并写明修改说明，提交到本地版本库gti commit -m “这里是修改说明”  4、获取远端文件12git fetch这一步只是把远程文件获取下来，但是并没有在工作目录中展示  5、变基12git rebase变基，这一步会把远程获取下来的文件放入到工作目录，并且会">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GitHub操作文档">
+<meta property="og:url" content="http://example.com/2022/02/15/github%E6%93%8D%E4%BD%9C%E6%96%87%E6%A1%A3/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一、基础操作1、克隆远端文件1git clone  2、把文件添加到本地版本库1git add  3、提交修改12把对文件的修改提交并写明修改说明，提交到本地版本库gti commit -m “这里是修改说明”  4、获取远端文件12git fetch这一步只是把远程文件获取下来，但是并没有在工作目录中展示  5、变基12git rebase变基，这一步会把远程获取下来的文件放入到工作目录，并且会">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-02-15T02:21:37.000Z">
+<meta property="article:modified_time" content="2022-02-15T02:59:19.275Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="git">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-github操作文档" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/02/15/github%E6%93%8D%E4%BD%9C%E6%96%87%E6%A1%A3/" class="article-date">
+  <time class="dt-published" datetime="2022-02-15T02:21:37.000Z" itemprop="datePublished">2022-02-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      GitHub操作文档
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="一、基础操作"><a href="#一、基础操作" class="headerlink" title="一、基础操作"></a>一、基础操作</h2><h3 id="1、克隆远端文件"><a href="#1、克隆远端文件" class="headerlink" title="1、克隆远端文件"></a>1、克隆远端文件</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、把文件添加到本地版本库"><a href="#2、把文件添加到本地版本库" class="headerlink" title="2、把文件添加到本地版本库"></a>2、把文件添加到本地版本库</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、提交修改"><a href="#3、提交修改" class="headerlink" title="3、提交修改"></a>3、提交修改</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">把对文件的修改提交并写明修改说明，提交到本地版本库</span><br><span class="line">gti commit -m “这里是修改说明”</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、获取远端文件"><a href="#4、获取远端文件" class="headerlink" title="4、获取远端文件"></a>4、获取远端文件</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git fetch</span><br><span class="line">这一步只是把远程文件获取下来，但是并没有在工作目录中展示</span><br></pre></td></tr></table></figure>
+
+<h3 id="5、变基"><a href="#5、变基" class="headerlink" title="5、变基"></a>5、变基</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git rebase</span><br><span class="line">变基，这一步会把远程获取下来的文件放入到工作目录，并且会对比两个文件是否有内容冲突，并提示处理冲突</span><br></pre></td></tr></table></figure>
+
+<h3 id="6、提交"><a href="#6、提交" class="headerlink" title="6、提交"></a>6、提交</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">把本地代码推送到远程仓库</span><br><span class="line">git push origin </span><br><span class="line">如果是提交到分支仓库</span><br><span class="line">git push origin 分支名</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>到上面为止是一个基本的代码提交更新的过程，但是4、5 两步可以合并为下面这一步，但是和下面这一步又有所不同</p>
+<h3 id="7、拉取"><a href="#7、拉取" class="headerlink" title="7、拉取"></a>7、拉取</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br><span class="line">这一步执行后，获取后的远端文件就会在工作目录中展示了，但是默认是不变基的，在TortoiseGit中可以选为变基，如果选中后就是一模一样了</span><br></pre></td></tr></table></figure>
+
+<h3 id="8、-分支"><a href="#8、-分支" class="headerlink" title="8、 分支"></a>8、 分支</h3><h4 id="8-1-创建分支"><a href="#8-1-创建分支" class="headerlink" title="8.1 创建分支"></a>8.1 创建分支</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch 分支名</span><br></pre></td></tr></table></figure>
+
+<h4 id="8-2-查看所有分支"><a href="#8-2-查看所有分支" class="headerlink" title="8.2 查看所有分支"></a>8.2 查看所有分支</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -a</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="8-3-切换分支"><a href="#8-3-切换分支" class="headerlink" title="8.3 切换分支"></a>8.3 切换分支</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout 分支名</span><br></pre></td></tr></table></figure>
+
+<h4 id="8-4-切换并创建分支"><a href="#8-4-切换并创建分支" class="headerlink" title="8.4 切换并创建分支"></a>8.4 切换并创建分支</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b 分支名</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、用Tortoise-Git-常用操作"><a href="#二、用Tortoise-Git-常用操作" class="headerlink" title="二、用Tortoise Git 常用操作"></a>二、用Tortoise Git 常用操作</h2><h3 id="1、本地建库"><a href="#1、本地建库" class="headerlink" title="1、本地建库"></a>1、本地建库</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git create respository</span><br><span class="line">这里可以鼠标右键操作--在这里创建本地仓库</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2、关联远程仓库"><a href="#2、关联远程仓库" class="headerlink" title="2、关联远程仓库"></a>2、关联远程仓库</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">这一步就只能在git bash 里实现了</span><br><span class="line">执行 git remote add origin https://github.com/xxxx/xxxx.git</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="3、合并分支"><a href="#3、合并分支" class="headerlink" title="3、合并分支"></a>3、合并分支</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">因为本地建仓一般是在master分支上，远程我的很多仓库是在origin分支上，所以需要合并分支</span><br><span class="line"><span class="bullet">1.</span> 查看本地所有分支 可以使用git bash的 git branch -a 查看</span><br><span class="line"><span class="bullet">2.</span> 鼠标右键切换远程origin分支 即remote/origin选项</span><br><span class="line"><span class="bullet">3.</span> 鼠标右键合并分支，被合并的是本地的master分支</span><br><span class="line"><span class="bullet">4.</span> 可以在远端把master分支给删除了</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/02/15/github%E6%93%8D%E4%BD%9C%E6%96%87%E6%A1%A3/" data-id="ckznkvbzb0004c0dv5kjc67oa" data-title="GitHub操作文档" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/" rel="tag">git</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/02/15/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/HexoDemo/" rel="tag">HexoDemo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/readme/" rel="tag">readme</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/" rel="tag">vue</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/HexoDemo/" style="font-size: 10px;">HexoDemo</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/readme/" style="font-size: 10px;">readme</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/02/15/github%E6%93%8D%E4%BD%9C%E6%96%87%E6%A1%A3/">GitHub操作文档</a>
+          </li>
+        
+          <li>
+            <a href="/2022/02/15/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2022/02/15/Hexo%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/">Hexo 基础操作</a>
+          </li>
+        
+          <li>
+            <a href="/2022/02/15/README/">README</a>
+          </li>
+        
+          <li>
+            <a href="/2022/02/15/jwt/">jwt基础操作</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
