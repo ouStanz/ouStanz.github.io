@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Vue-CLI一、关于CLI1、什么是CLIcli：command-line interface 命令行界面cli：command-line interface 命令行界面 2、什么是Vue-CLIVue-CLI 是一个基于vue.js进行快速开发的完整系统，使用Vue脚手架开发的页面奖是一个完整的项目 3、Vue-CLI的优势 通过@vue-cli可以搭建一个交互式的项目脚手架，通过执行命令的方">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2022/02/15/vue-cli/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Vue-CLI一、关于CLI1、什么是CLIcli：command-line interface 命令行界面cli：command-line interface 命令行界面 2、什么是Vue-CLIVue-CLI 是一个基于vue.js进行快速开发的完整系统，使用Vue脚手架开发的页面奖是一个完整的项目 3、Vue-CLI的优势 通过@vue-cli可以搭建一个交互式的项目脚手架，通过执行命令的方">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="c:/Users/ouSt/AppData/Roaming/Typora/typora-user-images/image-20220128102033954.png">
+<meta property="article:published_time" content="2022-02-15T01:39:49.959Z">
+<meta property="article:modified_time" content="2022-02-09T01:46:11.495Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/ouSt/AppData/Roaming/Typora/typora-user-images/image-20220128102033954.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-vue-cli" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/02/15/vue-cli/" class="article-date">
+  <time class="dt-published" datetime="2022-02-15T01:39:49.959Z" itemprop="datePublished">2022-02-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Vue-CLI"><a href="#Vue-CLI" class="headerlink" title="Vue-CLI"></a>Vue-CLI</h1><h2 id="一、关于CLI"><a href="#一、关于CLI" class="headerlink" title="一、关于CLI"></a>一、关于CLI</h2><h3 id="1、什么是CLI"><a href="#1、什么是CLI" class="headerlink" title="1、什么是CLI"></a>1、什么是CLI</h3><p>cli：command-line interface 命令行界面cli：command-line interface 命令行界面</p>
+<h3 id="2、什么是Vue-CLI"><a href="#2、什么是Vue-CLI" class="headerlink" title="2、什么是Vue-CLI"></a>2、什么是Vue-CLI</h3><p>Vue-CLI 是一个基于vue.js进行快速开发的完整系统，使用Vue脚手架开发的页面奖是一个完整的项目</p>
+<h3 id="3、Vue-CLI的优势"><a href="#3、Vue-CLI的优势" class="headerlink" title="3、Vue-CLI的优势"></a>3、Vue-CLI的优势</h3><ul>
+<li><p>通过<code>@vue-cli</code>可以搭建一个交互式的项目脚手架，通过执行命令的方式下载相关的依赖</p>
+</li>
+<li><p>通过 <code>@vue/cli</code> + <code>@vue/cli-service-global</code> 实现的零配置原型开发。</p>
+</li>
+<li><p>一个运行时依赖 ( <code>@vue/cli-service</code>)，该依赖：</p>
+<ul>
+<li>可升级，一个命令就可以升级；</li>
+<li>基于 webpack 构建，并带有合理的默认配置；&#x3D;&#x3D;》项目打包，编译好的项目源码直接放到服务器上使用</li>
+<li>可以通过项目内的配置文件进行配置；</li>
+<li>可以通过插件进行扩展。vue v-charts element-ui</li>
+</ul>
+</li>
+<li><p>一个丰富的官方插件集合，集成了前端生态中最好的工具。 Nodejs ，Vue Router，webpack，yarn</p>
+</li>
+<li><p>一套完全图形化的创建和管理 Vue.js 项目的用户界面。</p>
+</li>
+</ul>
+<h2 id="二、Vue-CLI的使用"><a href="#二、Vue-CLI的使用" class="headerlink" title="二、Vue-CLI的使用"></a>二、Vue-CLI的使用</h2><h3 id="1、创建脚手架项目"><a href="#1、创建脚手架项目" class="headerlink" title="1、创建脚手架项目"></a>1、创建脚手架项目</h3><p><code>vue init webpack myVue</code></p>
+<h5 id="huiVent"><a href="#huiVent" class="headerlink" title="huiVent"></a>huiVent</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">huiVent</span><br><span class="line">- build--------&gt;用来使用webpack打包使用的build以来</span><br><span class="line">- config-------&gt;用来做整个项目配置的目录</span><br><span class="line">- node_modules----&gt;用来管理项目中使用的依赖</span><br><span class="line">- src ---------&gt;用来书写vue的源代码</span><br><span class="line">	assets    ----用来存放静态资源</span><br><span class="line">	components ---用来书写vue组件</span><br><span class="line">	js         ---</span><br><span class="line">	router     ---配置项目中的路由</span><br><span class="line">	<span class="title class_">App</span>.<span class="property">vue</span>    ---项目中根组件</span><br><span class="line">	main.<span class="property">js</span>    ---项目中主入口</span><br><span class="line">- <span class="keyword">static</span>       ---其他静态</span><br><span class="line">- test</span><br><span class="line">- .<span class="property">babelrc</span>     ---将es6语法转换成es5运行</span><br><span class="line">- .<span class="property">editorconfig</span>---项目编辑配置</span><br><span class="line">- .<span class="property">eslintignore</span></span><br><span class="line">- .<span class="property">eslintrc</span>.<span class="property">js</span></span><br><span class="line">- .<span class="property">gitignore</span></span><br><span class="line">- .<span class="property">postcssrc</span>.<span class="property">js</span>---使用源码相关js</span><br><span class="line">- index.<span class="property">html</span></span><br><span class="line">- package.<span class="property">json</span></span><br><span class="line">- package-lock.<span class="property">json</span></span><br><span class="line">- <span class="variable constant_">README</span>.<span class="property">md</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2、项目运行"><a href="#2、项目运行" class="headerlink" title="2、项目运行"></a>2、项目运行</h3><p><code>npm start</code></p>
+<h3 id="3、Vue-CLI中项目的开发方式"><a href="#3、Vue-CLI中项目的开发方式" class="headerlink" title="3、Vue-CLI中项目的开发方式"></a>3、Vue-CLI中项目的开发方式</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">注意：一切接组件 一个组件中 js代码 html代码 css代码</span><br><span class="line">1、Vue-CLI开发方式是一个一个的组件，用组件分割成一个一个的功能模块，日后可以将多个组件组合到一起形成一个前端系统</span><br><span class="line">2、在使用Vuel-CLI进行开发时不在书写html，而是编写的一个个组件，在打包时Vue-CLI会把组件编译成一个html文件</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、如何开发Vue-CLI"><a href="#4、如何开发Vue-CLI" class="headerlink" title="4、如何开发Vue-CLI"></a>4、如何开发Vue-CLI</h3><h4 id="4-1-一切接组件"><a href="#4-1-一切接组件" class="headerlink" title="4.1  一切接组件"></a>4.1  一切接组件</h4><p><code>注意：在Vue-CLI中一切皆组件</code></p>
+<p>主入口为main.js，因为一切皆组件，所以在主入口中，根页面也作为组件，即把App.vue作为组件导入</p>
+<p>不建议对根Vue实例进行更改</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div id=&quot;app&quot;&gt;</span><br><span class="line">    &lt;router-view/&gt;//到了这里就会去掉router文件夹下index.js进行当前路径需要进行加载哪些控件</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">new Vue(&#123;</span><br><span class="line">  el: &#x27;#app&#x27;, //绑定Vue实例全局作用范围</span><br><span class="line">  router,</span><br><span class="line">  components: &#123;App&#125;,//注册组件</span><br><span class="line">  template: &#x27;&lt;App/&gt;&#x27;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-2-Router"><a href="#4-2-Router" class="headerlink" title="4.2 Router"></a>4.2 Router</h4><p>Vue-CLI分配页面是通过router来分配的，在router文件夹下的index.js文件管理页面路由，path规定了127.0.0.1:8080&#x2F;这后面跟的路径，当在浏览器url地址栏输入地址后，router会自动寻找相应路径下的页面。</p>
+<p>这里做了个尝试，当放置两个相同的路径时，默认加载前面那个路径的内容，如果想把两个组件放到一起，要用下面说的单页内引用其他组件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">export default new Router(&#123;</span><br><span class="line">  routes: [</span><br><span class="line"></span><br><span class="line">    &#123;</span><br><span class="line">      path:&#x27;/&#x27;,</span><br><span class="line">      name:&#x27;Regist&#x27;,</span><br><span class="line">      component:Regist</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      path: &#x27;/&#x27;,</span><br><span class="line">      name: &#x27;HelloWorld&#x27;,</span><br><span class="line">      component: HelloWorld</span><br><span class="line">    &#125;,</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>如果需要将两个或多个路径都指向一个组件内容，可以用重定向redirect </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">routes: [</span><br><span class="line">&#123;</span><br><span class="line">  path: &#x27;/&#x27;,redirect:&#x27;/home&#x27;//像这样,路径&#x27;/&#x27;和&#x27;/home&#x27;都会指向/home,显示HellowzWorld</span><br><span class="line">&#125;,</span><br><span class="line">&#123;</span><br><span class="line">  path:&#x27;/home&#x27;,</span><br><span class="line">  name: &#x27;HelloWorld&#x27;,</span><br><span class="line">  component: HelloWorld</span><br><span class="line">&#125;,</span><br><span class="line">]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\ouSt\AppData\Roaming\Typora\typora-user-images\image-20220128102033954.png" alt="image-20220128102033954"></p>
+<h5 id="4-2-1-引用其他组件–通过路由方式"><a href="#4-2-1-引用其他组件–通过路由方式" class="headerlink" title="4.2.1 引用其他组件–通过路由方式"></a>4.2.1 引用其他组件–通过路由方式</h5><p>在App.vue的template中加入<router-view/> 表示要引用这个路由下的内容，这个只能在根路径下使用，因为其他路径下已经规定好了router</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div id=&quot;app&quot;&gt;</span><br><span class="line">    &lt;img src=&quot;./assets/logo.png&quot;&gt;</span><br><span class="line">    &lt;router-view/&gt; </span><br><span class="line"></span><br><span class="line">    &lt;Footer&gt;&lt;/Footer&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="4-2-2-单页内引用其他组件–不是通过路由方式"><a href="#4-2-2-单页内引用其他组件–不是通过路由方式" class="headerlink" title="4.2.2 单页内引用其他组件–不是通过路由方式"></a>4.2.2 单页内引用其他组件–不是通过路由方式</h5><p>import引入的是对应vue中的全部，而在components中配置了之后可以使用，在组件配置过后，将要放置的组件用<Footer></Footer>这种形式把想要组织的组件放到要放的位置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div id=&quot;app&quot;&gt;</span><br><span class="line">    &lt;img src=&quot;./assets/logo.png&quot;&gt;</span><br><span class="line">    &lt;router-view/&gt;</span><br><span class="line">    &lt;Footer&gt;&lt;/Footer&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  import Footer from &#x27;./components/Footer&#x27;</span><br><span class="line">export default &#123;</span><br><span class="line">  name: &#x27;App&#x27;,</span><br><span class="line">  components: &#123;Footer&#125;,</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">//而在Footer.vue中</span><br><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      这里是egs365 的地界，备案号是1234567654321</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">    //这里并没有导出什么</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line"></span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h5 id="4-2-3-路由切换"><a href="#4-2-3-路由切换" class="headerlink" title="4.2.3 路由切换"></a>4.2.3 路由切换</h5><p>通过链接方式切换不同路由页面</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;#/&quot;&gt;主页&lt;/a&gt;</span><br><span class="line">&lt;a href=&quot;#/regist&quot;&gt;分页&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="4-2-4-子路由"><a href="#4-2-4-子路由" class="headerlink" title="4.2.4 子路由"></a>4.2.4 子路由</h5><p>在一些页面下，点击功能键，会有用到子路由的情况，子路由的配置方式如下。注意add</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">export default new Router(&#123;</span><br><span class="line">  routes: [</span><br><span class="line">  &#123;</span><br><span class="line">    path: &#x27;/&#x27;,redirect:&#x27;/home&#x27;</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">	//一级路由</span><br><span class="line">    path:&#x27;/home&#x27;,</span><br><span class="line">    component: HelloWorld</span><br><span class="line">  &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      path:&#x27;/home&#x27;,</span><br><span class="line">      name:&#x27;Regist&#x27;,</span><br><span class="line">      component:Regist,</span><br><span class="line">      children:[&#123;</span><br><span class="line">	   //add前面不需要加斜杠，因为不是一级路由</span><br><span class="line">       path:&#x27;add&#x27;,component:UserAdd//这里就是子路由</span><br><span class="line">      &#125;]</span><br><span class="line">    &#125;,</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>使用的时候在regist的template下引用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;div&gt;这个是账号注册页面&lt;/div&gt;</span><br><span class="line">      &lt;a href=&quot;#/regist/add&quot;&gt;添加&lt;/a&gt;//引用功能链接</span><br><span class="line">      &lt;router-view/&gt;//路由引用</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="4-2-5-路由传参"><a href="#4-2-5-路由传参" class="headerlink" title="4.2.5 路由传参"></a>4.2.5 路由传参</h5><p>属性绑定 :href&#x3D;””+user.id</p>
+<p>this.$route.query.id</p>
+<h5 id="4-2-6-监听路由变化"><a href="#4-2-6-监听路由变化" class="headerlink" title="4.2.6 监听路由变化"></a>4.2.6 监听路由变化</h5><p>this.$router.push(‘&#x2F;user’)</p>
+<h3 id="5、使用axios"><a href="#5、使用axios" class="headerlink" title="5、使用axios"></a>5、使用axios</h3><ul>
+<li><p>安装<code>npm install axios --save-dev</code></p>
+</li>
+<li><p>在main.js中配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Vue.prototype.$http=axios;//修改内部的$http为axios</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用axios，在需要发布异步请求的位置：<strong>this.$http.get()</strong>—因为这里已经替换为axios了</p>
+</li>
+</ul>
+<h3 id="6、rap2"><a href="#6、rap2" class="headerlink" title="6、rap2"></a>6、rap2</h3><p>rap2就是一款在线模拟数据生成器，可以拦截Ajax请求，其作用在于帮助前端工程师独立于后端进行开发，<strong>实现前后端分离</strong>。</p>
+<h3 id="7、v-model-实现双向绑定"><a href="#7、v-model-实现双向绑定" class="headerlink" title="7、v-model 实现双向绑定"></a>7、v-model 实现双向绑定</h3><h3 id="8、-click"><a href="#8、-click" class="headerlink" title="8、@click"></a>8、@click</h3><h1 id="Vue-CLI-后端部分"><a href="#Vue-CLI-后端部分" class="headerlink" title="Vue-CLI 后端部分"></a>Vue-CLI 后端部分</h1><h3 id="Vue-CLI项目该打包部署"><a href="#Vue-CLI项目该打包部署" class="headerlink" title="Vue-CLI项目该打包部署"></a>Vue-CLI项目该打包部署</h3><ol>
+<li>在项目的根目录中执行如下命令</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vue run build// 打包</span><br><span class="line">/**vue打包的项目必须在服务器上运行*/</span><br><span class="line">打包之后当前项目有一个dist目录</span><br></pre></td></tr></table></figure>
+
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/02/15/vue-cli/" data-id="ckznh42730001isdv7wuagmel" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/02/15/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/demo-%E8%A1%A8%E7%A4%BA/" rel="tag">demo 表示</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/demo-%E8%A1%A8%E7%A4%BA/" style="font-size: 10px;">demo 表示</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/02/15/vue-cli/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/02/15/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2022/02/15/hello/">你好</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
