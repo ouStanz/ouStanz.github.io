@@ -4,24 +4,24 @@
   <meta charset="utf-8">
   
   
-  <title>Hexo 基础操作 | Hexo</title>
+  <title>Hexo 基础操作 | tanz&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Quick Start配置环境 安装node，下载的是node v-14.19.0版本  安装hexo-cli，cmd中使用npm install hexo-cli -g进行全局安装，需要注意的是现在hexo是v6.0.0版本，需要node 的v12以上版本，初始化一个hexo的博客配置 1231. 在要建博客的文件夹下，cmd敲入hexo init myBlog,这里的myBlog是一个文件夹名">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo 基础操作">
 <meta property="og:url" content="http://example.com/2022/02/15/Hexo%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="tanz&#39;s Blog">
 <meta property="og:description" content="Quick Start配置环境 安装node，下载的是node v-14.19.0版本  安装hexo-cli，cmd中使用npm install hexo-cli -g进行全局安装，需要注意的是现在hexo是v6.0.0版本，需要node 的v12以上版本，初始化一个hexo的博客配置 1231. 在要建博客的文件夹下，cmd敲入hexo init myBlog,这里的myBlog是一个文件夹名">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale">
 <meta property="og:image" content="c:/Users/ouSt/AppData/Roaming/Typora/typora-user-images/image-20220215112309564.png">
 <meta property="article:published_time" content="2022-02-15T01:29:37.000Z">
-<meta property="article:modified_time" content="2022-02-15T03:40:21.656Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:modified_time" content="2022-02-15T04:05:42.982Z">
+<meta property="article:author" content="tanz">
 <meta property="article:tag" content="HexoDemo">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="c:/Users/ouSt/AppData/Roaming/Typora/typora-user-images/image-20220215112309564.png">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="tanz's Blog" type="application/atom+xml">
   
   
     <link rel="shortcut icon" href="/favicon.png">
@@ -49,7 +49,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+        <a href="/" id="logo">tanz&#39;s Blog</a>
       </h1>
       
     </div>
@@ -132,6 +132,50 @@
 <ol start="2">
 <li>需要下载hexo联合git发布的插件<code>npm install hexo-deployer-git --save</code></li>
 <li>配置好后就可以通过指令发布了，一般需要晴空下缓存，然后生成发布</li>
+</ol>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>这样之后就可以在浏览器输入<youname>.github.io产看博客了</p>
+<h3 id="绑定个人域名"><a href="#绑定个人域名" class="headerlink" title="绑定个人域名"></a>绑定个人域名</h3><p>现在的域名是git提供的，可以自己申请一个绑定，比如绑定在egs365.top</p>
+<h4 id="阿里云域名"><a href="#阿里云域名" class="headerlink" title="阿里云域名"></a>阿里云域名</h4><p>我的是阿里云买的域名，所以在阿里云控制台，进行解析，把github的服务器地址添加进去，是192.30.252.153 和 192.30.252.154 ，解析路线选默认，主机记录时@，记录类型是A类即可</p>
+<h4 id="git域名操作"><a href="#git域名操作" class="headerlink" title="git域名操作"></a>git域名操作</h4><p>登录github建的那个博客仓库，点击settings，设置custom domain，输入域名，如egs365.top</p>
+<p>然后再再博客文件夹myBlog下的source文件夹下创建CNAME文件（不写后缀），里面写入域名<code>egs365.top</code>,最后在发布一遍就可以了</p>
+<h1 id="详细配置"><a href="#详细配置" class="headerlink" title="详细配置"></a>详细配置</h1><h2 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h2><p>在_config.yml下可以实现网站的个性化配置很有意思</p>
+<h3 id="Site"><a href="#Site" class="headerlink" title="Site"></a>Site</h3><table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>title</code></td>
+<td align="center">网站标题</td>
+</tr>
+<tr>
+<td align="center"><code>subtitle</code></td>
+<td align="center">网站副标题</td>
+</tr>
+<tr>
+<td align="center"><code>description</code></td>
+<td align="center">网站描述–主要用于百度SEO推广，包含网站关键字</td>
+</tr>
+<tr>
+<td align="center"><code>author</code></td>
+<td align="center">您的名字–网站的作者</td>
+</tr>
+<tr>
+<td align="center"><code>language</code></td>
+<td align="center">网站使用的语言</td>
+</tr>
+<tr>
+<td align="center"><code>timezone</code></td>
+<td align="center">网站时区。Hexo 默认使用您电脑的时区。<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">时区列表</a>。比如说：<code>America/New_York</code>, <code>Japan</code>, 和 <code>UTC</code> 。</td>
+</tr>
+</tbody></table>
+<h3 id="相关学习链接"><a href="#相关学习链接" class="headerlink" title="相关学习链接"></a>相关学习链接</h3><ol>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/sinat_37781304/article/details/82729029">hexo史上最全搭建教程_Fangzh的技术博客-CSDN博客_hexo</a></li>
+<li><a target="_blank" rel="noopener" href="https://kchen.cc/2016/11/12/hexo-instructions/">基于 Hexo 的全自动博客构建部署系统 - KChen’s Blog</a></li>
 </ol>
 <h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>Hexo还是很好用的。</p>
 
@@ -246,7 +290,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       
-      &copy; 2022 John Doe<br>
+      &copy; 2022 tanz<br>
       Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
