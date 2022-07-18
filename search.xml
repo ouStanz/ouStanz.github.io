@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>README</title>
+    <url>/2022/02/15/README/</url>
+    <content><![CDATA[<h1 id="typora"><a href="#typora" class="headerlink" title="typora-"></a>typora-</h1><p>typora新建的笔记仓库</p>
+<p>本仓库在远端的typora-中存储，编辑有typora编辑器进行</p>
+<p>博客发布由hexo联合git发布静态博客服务，发布的博客服务有git托管</p>
+]]></content>
+      <tags>
+        <tag>readme</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo 基础操作</title>
+    <url>/2022/02/15/Hexo%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</url>
+    <content><![CDATA[<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h3><ol>
+<li><p>安装node，下载的是node v-14.19.0版本</p>
+</li>
+<li><p>安装hexo-cli，cmd中使用<code>npm install hexo-cli -g</code>进行全局安装，需要注意的是现在hexo是v6.0.0版本，需要node 的v12以上版本，初始化一个hexo的博客配置</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">1.</span> 在要建博客的文件夹下，cmd敲入hexo init myBlog,这里的myBlog是一个文件夹名字</span><br><span class="line"><span class="bullet">2.</span> 继续cmd敲入 cd myBlog ，这里是进入myBlog文件目录</span><br><span class="line"><span class="bullet">3.</span> npm install 安装了环境</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装git，官网下载安装即可</p>
+</li>
+</ol>
+<h3 id="本地开启博客服务–新建一篇博客"><a href="#本地开启博客服务–新建一篇博客" class="headerlink" title="本地开启博客服务–新建一篇博客"></a>本地开启博客服务–新建一篇博客</h3><p>新建我的一篇博客，博客名为“第一篇博客”<code>hexo new 第一篇博客</code></p>
+<p>生成博客内容<code> hexo generate</code></p>
+<p>启动服务预览<code>hexo server -p 7099</code>这里默认是4000，但是我的4000端口被占用了，改成了7099端口</p>
+<p>所有命令都可以简写</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">hexo new === hexo n “博客名” 创建博客</span><br><span class="line">hexo generate === hexo g 生成</span><br><span class="line">hexo server === hexo s 启动服务</span><br><span class="line">hexo clean  清除缓存--这里尝试了不能用hexo c</span><br><span class="line">hexo deploy ===hexo d 部署</span><br></pre></td></tr></table></figure>
+
+<p>创建后的博客模板是这样的</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 第一篇博客</span><br><span class="line">date: 2022-02-15 11:21:17</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>上面的title 、date、tags 在post.md中进行，渲染<br>不写的话会出现没有标题名的问题</p>
+<p><img src="C:\Users\ouSt\AppData\Roaming\Typora\typora-user-images\image-20220215112309564.png" alt="image-20220215112309564"></p>
+<p>用markdown语言（我用的是typora编辑器）书写博客内容，然后用hexo s 发布出来就可以本地浏览了</p>
+<h3 id="Git托管服务发布博客"><a href="#Git托管服务发布博客" class="headerlink" title="Git托管服务发布博客"></a>Git托管服务发布博客</h3><p>GitHub配置</p>
+<ol>
+<li>需要先在github上创建一个pulic仓库，名字为<yourname>.github.io,这也是以后发布的博客地址c</li>
+</ol>
+<p>hexo的配置</p>
+<ol>
+<li>因为是发布首先需要配置基本文件</li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/one-command-deployment</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/ouStanz/ouStanz.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>需要下载hexo联合git发布的插件<code>npm install hexo-deployer-git --save</code></li>
+<li>配置好后就可以通过指令发布了，一般需要晴空下缓存，然后生成发布</li>
+</ol>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>这样之后就可以在浏览器输入<youname>.github.io产看博客了</p>
+<h3 id="绑定个人域名"><a href="#绑定个人域名" class="headerlink" title="绑定个人域名"></a>绑定个人域名</h3><p>现在的域名是git提供的，可以自己申请一个绑定，比如绑定在egs365.top</p>
+<h4 id="阿里云域名"><a href="#阿里云域名" class="headerlink" title="阿里云域名"></a>阿里云域名</h4><p>我的是阿里云买的域名，所以在阿里云控制台，进行解析，把github的服务器地址添加进去，是192.30.252.153 和 192.30.252.154 ，解析路线选默认，主机记录时@，记录类型是A类即可</p>
+<h4 id="git域名操作"><a href="#git域名操作" class="headerlink" title="git域名操作"></a>git域名操作</h4><p>登录github建的那个博客仓库，点击settings，设置custom domain，输入域名，如egs365.top</p>
+<p>然后再再博客文件夹myBlog下的source文件夹下创建CNAME文件（不写后缀），里面写入域名<code>egs365.top</code>,最后在发布一遍就可以了</p>
+<h1 id="详细配置"><a href="#详细配置" class="headerlink" title="详细配置"></a>详细配置</h1><h2 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h2><p>在_config.yml下可以实现网站的个性化配置很有意思</p>
+<h3 id="Site"><a href="#Site" class="headerlink" title="Site"></a>Site</h3><table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>title</code></td>
+<td align="center">网站标题</td>
+</tr>
+<tr>
+<td align="center"><code>subtitle</code></td>
+<td align="center">网站副标题</td>
+</tr>
+<tr>
+<td align="center"><code>description</code></td>
+<td align="center">网站描述–主要用于百度SEO推广，包含网站关键字</td>
+</tr>
+<tr>
+<td align="center"><code>author</code></td>
+<td align="center">您的名字–网站的作者</td>
+</tr>
+<tr>
+<td align="center"><code>language</code></td>
+<td align="center">网站使用的语言</td>
+</tr>
+<tr>
+<td align="center"><code>timezone</code></td>
+<td align="center">网站时区。Hexo 默认使用您电脑的时区。<a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">时区列表</a>。比如说：<code>America/New_York</code>, <code>Japan</code>, 和 <code>UTC</code> 。</td>
+</tr>
+</tbody></table>
+<h3 id="url"><a href="#url" class="headerlink" title="url"></a>url</h3><table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>url</code></td>
+<td align="center">网址–自己的网站域名如ouStanz.github.io</td>
+</tr>
+<tr>
+<td align="center"><code>root</code></td>
+<td align="center">网站根目录</td>
+</tr>
+<tr>
+<td align="center"><code>permalink</code></td>
+<td align="center">文章的 <a href="https://hexo.io/zh-cn/docs/permalinks">永久链接</a> 格式</td>
+</tr>
+<tr>
+<td align="center"><code>permalink_defaults</code></td>
+<td align="center">永久链接中各部分的默认值</td>
+</tr>
+</tbody></table>
+<p>permalink一般不用更换，也可以根据官网描述换成自己喜欢的，示例为</p>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">:year&#x2F;:month&#x2F;:day&#x2F;:title&#x2F;</td>
+<td align="center">2013&#x2F;07&#x2F;14&#x2F;hello-world</td>
+</tr>
+<tr>
+<td align="center">:year-:month-:day-:title.html</td>
+<td align="center">2013-07-14-hello-world.html</td>
+</tr>
+<tr>
+<td align="center">:category&#x2F;:title</td>
+<td align="center">foo&#x2F;bar&#x2F;hello-world</td>
+</tr>
+</tbody></table>
+<h3 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h3><p>就是最开始说的<code>---</code>分割的部分，存放title、date、tag的，也可以配置更多内容</p>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>layout</code></td>
+<td align="center">布局</td>
+</tr>
+<tr>
+<td align="center"><code>title</code></td>
+<td align="center">标题</td>
+</tr>
+<tr>
+<td align="center"><code>date</code></td>
+<td align="center">建立日期</td>
+</tr>
+<tr>
+<td align="center"><code>updated</code></td>
+<td align="center">更新日期</td>
+</tr>
+<tr>
+<td align="center"><code>comments</code></td>
+<td align="center">开启文章的评论功能</td>
+</tr>
+<tr>
+<td align="center"><code>tags</code></td>
+<td align="center">标签（不适用于分页）—不具有顺序性</td>
+</tr>
+<tr>
+<td align="center"><code>categories</code></td>
+<td align="center">分类（不适用于分页）–具有顺序性</td>
+</tr>
+<tr>
+<td align="center"><code>permalink</code></td>
+<td align="center">覆盖文章网址</td>
+</tr>
+<tr>
+<td align="center">top</td>
+<td align="center">文章置顶–数字越大越靠前</td>
+</tr>
+</tbody></table>
+<h3 id="layout"><a href="#layout" class="headerlink" title="layout"></a>layout</h3><p>到目前为止，我们可以看看博客地址的目录结构了，scaffolds是存放模板的文件夹，默认提供了三个模板，咱这里可以根据自己的需求新建模板</p>
+<p><img src="C:\Users\ouSt\AppData\Roaming\Typora\typora-user-images\image-20220215141824666.png" alt="image-20220215141824666"></p>
+<h4 id="post"><a href="#post" class="headerlink" title="post"></a>post</h4><p>新建的博客文章内容给都是在<code>_posts</code>文件夹下，而<code>_posts</code>文件夹下所有内容的构建布局模板其实是在<code>scaffolds</code>文件夹下的post.md中，也就是通过命令<code>hexo n 新内容</code>新建的博客最开头都有设置好的title、date、tags这三部分模板内容，如post.md中的模板改成这样</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line"><span class="section">tags:&#123;&#123;tags&#125;&#125;</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"><span class="section">#quick start</span></span><br><span class="line"></span><br><span class="line"><span class="section">##content</span></span><br><span class="line">there is sth</span><br><span class="line"><span class="section">#end</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>执行<code>hexo n newpage1</code>后得到的结果就是这样的</p>
+<p><img src="C:\Users\ouSt\AppData\Roaming\Typora\typora-user-images\image-20220215142552526.png" alt="image-20220215142552526"></p>
+<p>其实还有很多其他的方式。hexo提供了三种布局方式</p>
+<table>
+<thead>
+<tr>
+<th align="center">布局</th>
+<th align="center">布局文件路径</th>
+<th align="center">内容文件路径路径</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>post</code></td>
+<td align="center"><code>scaffolds/post.md</code></td>
+<td align="center"><code>source/_posts</code></td>
+</tr>
+<tr>
+<td align="center"><code>page</code></td>
+<td align="center"><code>scaffolds/page.md</code></td>
+<td align="center"><code>source</code></td>
+</tr>
+<tr>
+<td align="center"><code>draft</code></td>
+<td align="center"><code>scaffolds/draft.md</code></td>
+<td align="center"><code>source/_drafts</code></td>
+</tr>
+</tbody></table>
+<p>而当使用<code>hexo n newpage</code>时，其实完整命令是<code>hexo new [layout]&lt;title&gt;</code>，只不过layout默认为post而已</p>
+<h4 id="page"><a href="#page" class="headerlink" title="page"></a>page</h4><p>如果想另起一页用page的模板，可以使用命令<code>hexo n page board</code>，这样就建立了以page为模板的board文件夹，对应的内容就可以在board文件夹下写，如果想访问就可以用链接<code>http://127.0.0.1:7099/board</code>去访问，外网链接格式一致</p>
+<h4 id="draft"><a href="#draft" class="headerlink" title="draft"></a>draft</h4><p>是草稿文件模板，即以该模板写的文章不会被别人看到，内容会放在<code>source\_draft</code>文件夹下，如果想要预览则可以通过<code>hexo server --draft</code>预览，最后想post的话可以使用 <code>hexo publish draft newpage</code>把想要post的部分内容pulish出去</p>
+<h2 id="主题的"><a href="#主题的" class="headerlink" title="主题的"></a>主题的</h2><p>可以更换主题啦啦啦~~，原主题实在是太丑了，<a href="https://hexo.io/themes/">这是更换主题地址</a>，看好哪个下载下来（简约风格又NexT、hueman）等，从github下载后在<code>_config.yml</code>的theme部分换成<code>主题文件夹</code>的名字就行了</p>
+<p>然后进入主题文件夹下，找到<code>—config.xml.example</code>，复制一份，重命名为<code>_config.xml</code>就好了</p>
+<p>我这用的是Ayer，看着不错</p>
+<h3 id="customize"><a href="#customize" class="headerlink" title="customize"></a>customize</h3><p>在主题文件夹下的<code>source/css/images</code>中放入需要的图片，然后配置主题的_config.yml文件中先对应的路径就可以了</p>
+<h3 id="插件-必需"><a href="#插件-必需" class="headerlink" title="插件(必需)"></a>插件(必需)</h3><ul>
+<li><p><a href="https://github.com/theme-next/hexo-generator-searchdb">hexo-generator-searchdb</a> 用于搜索</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">COPYnpm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+
+<p>然后将以下配置复制到你博客根目录下的 <code>_config.yml</code> 里（注意不是 ayer 目录下的）:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">COPY# hexo-generator-searchdb</span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><a href="https://github.com/hexojs/hexo-generator-feed">hexo-generator-feed</a> 用于生成 RSS 订阅</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">COPYnpm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
+
+<p>然后将以下配置复制到你博客根目录下的 <code>_config.yml</code> 里（注意不是 ayer 目录下的）:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">COPY</span><br><span class="line"># Extensions</span><br><span class="line">## Plugins:https://hexo.io/plugins</span><br><span class="line"># RSS订阅</span><br><span class="line">Plugin:</span><br><span class="line">- hexo-generator-feed</span><br><span class="line"># Feed Atom</span><br><span class="line">feed:</span><br><span class="line">  type: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  limit: 20</span><br><span class="line">  hub:</span><br><span class="line">  content:</span><br><span class="line">  content_limit: 140</span><br><span class="line">  content_limit_delim: &quot; &quot;</span><br><span class="line">  order_by: -date</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="插件-可选"><a href="#插件-可选" class="headerlink" title="插件(可选)"></a>插件(可选)</h3><ul>
+<li><a href="https://github.com/netcan/hexo-generator-index-pin-top">hexo-generator-index-pin-top</a> 用于文章置顶</li>
+<li><a href="https://github.com/MikeCoder/hexo-blog-encrypt/blob/master/ReadMe.zh.md">hexo-blog-encrypt</a> 用于文章加密</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-blog-encrypt</span><br><span class="line"></span><br><span class="line">然后再文章title加入password</span><br><span class="line">title: Hello World</span><br><span class="line">date: 2016-03-30 21:18:02</span><br><span class="line">password: hello</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li><a href="https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md">hexo-tag-aplayer</a> 用于播放音乐</li>
+<li><a href="https://github.com/MoePlayer/hexo-tag-dplayer">hexo-tag-dplayer</a> 用于播放视频</li>
+<li><a href="https://github.com/EYHN/hexo-helper-live2d/blob/master/README.zh-CN.md">hexo-helper-live2d</a> 二次元看板娘</li>
+</ul>
+<p>更多插件请见 <a href="https://hexo.io/plugins/">hexo 插件市场</a></p>
+<h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">COPYhexo new page categories</span><br></pre></td></tr></table></figure>
+
+<p>然后将以下复制到 &#x2F;source&#x2F;categories&#x2F;index.md 文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">COPY</span><br><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">layout: &quot;categories&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h3 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">COPYhexo new page tags</span><br></pre></td></tr></table></figure>
+
+<p>配置同分类一样</p>
+<h3 id="友情链接"><a href="#友情链接" class="headerlink" title="友情链接"></a>友情链接</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">COPY hexo new page friends</span><br></pre></td></tr></table></figure>
+
+<p>然后将以下复制到 &#x2F;source&#x2F;friends&#x2F;index.md 文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">COPY---</span><br><span class="line">title: friends</span><br><span class="line">type: friends</span><br><span class="line">layout: &quot;friends&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>然后在 ayer 主题目录下的 <code>_config.yml</code> 中自定义 <code>friends_link</code> 配置项即可</p>
+<h3 id="相册"><a href="#相册" class="headerlink" title="相册"></a>相册</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">COPYhexo new page photos</span><br></pre></td></tr></table></figure>
+
+<p>然后将以下复制到 &#x2F;source&#x2F;photos&#x2F;index.md 文件，<code>img_url</code> 替换成图片路径，<code>caption</code> 替换成图片名称</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">COPY---</span><br><span class="line">title: Gallery</span><br><span class="line"></span><br><span class="line">albums: [[&quot;img_url&quot;, &quot;img_caption&quot;], [&quot;img_url&quot;, &quot;img_caption&quot;]]</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h3 id="文章目录"><a href="#文章目录" class="headerlink" title="文章目录"></a>文章目录</h3><p>用 Tocbot 解析文章标题并生成目录</p>
+<ul>
+<li>将以下配置复制到你 ayer 主题目录下的 <code>_config.yml</code> 里：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">COPY# Toc</span><br><span class="line">toc: true</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>当然你可能并不想所有文章都生成悬浮目录，你可以在文章顶部的配置中加一行来进行关闭：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">COPY---</span><br><span class="line">no_toc: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h2 id="相关学习链接"><a href="#相关学习链接" class="headerlink" title="相关学习链接"></a>相关学习链接</h2><ol>
+<li><a href="https://blog.csdn.net/sinat_37781304/article/details/82729029">hexo史上最全搭建教程_Fangzh的技术博客-CSDN博客_hexo</a></li>
+<li><a href="https://kchen.cc/2016/11/12/hexo-instructions/">基于 Hexo 的全自动博客构建部署系统 - KChen’s Blog</a></li>
+<li><a href="https://shen-yu.gitee.io/2019/ayer/">ayer文档</a></li>
+</ol>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>Hexo还是很好用的。</p>
+]]></content>
+      <tags>
+        <tag>HexoDemo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GitHub操作文档</title>
+    <url>/2022/02/15/github%E6%93%8D%E4%BD%9C%E6%96%87%E6%A1%A3/</url>
+    <content><![CDATA[<h2 id="一、基础操作"><a href="#一、基础操作" class="headerlink" title="一、基础操作"></a>一、基础操作</h2><h3 id="1、克隆远端文件"><a href="#1、克隆远端文件" class="headerlink" title="1、克隆远端文件"></a>1、克隆远端文件</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git clone</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、把文件添加到本地版本库"><a href="#2、把文件添加到本地版本库" class="headerlink" title="2、把文件添加到本地版本库"></a>2、把文件添加到本地版本库</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git add</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、提交修改"><a href="#3、提交修改" class="headerlink" title="3、提交修改"></a>3、提交修改</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">把对文件的修改提交并写明修改说明，提交到本地版本库</span><br><span class="line">gti commit -m “这里是修改说明”</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、获取远端文件"><a href="#4、获取远端文件" class="headerlink" title="4、获取远端文件"></a>4、获取远端文件</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git fetch</span><br><span class="line">这一步只是把远程文件获取下来，但是并没有在工作目录中展示</span><br></pre></td></tr></table></figure>
+
+<h3 id="5、变基"><a href="#5、变基" class="headerlink" title="5、变基"></a>5、变基</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git rebase</span><br><span class="line">变基，这一步会把远程获取下来的文件放入到工作目录，并且会对比两个文件是否有内容冲突，并提示处理冲突</span><br></pre></td></tr></table></figure>
+
+<h3 id="6、提交"><a href="#6、提交" class="headerlink" title="6、提交"></a>6、提交</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">把本地代码推送到远程仓库</span><br><span class="line">git push origin </span><br><span class="line">如果是提交到分支仓库</span><br><span class="line">git push origin 分支名</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>到上面为止是一个基本的代码提交更新的过程，但是4、5 两步可以合并为下面这一步，但是和下面这一步又有所不同</p>
+<h3 id="7、拉取"><a href="#7、拉取" class="headerlink" title="7、拉取"></a>7、拉取</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git pull</span><br><span class="line">这一步执行后，获取后的远端文件就会在工作目录中展示了，但是默认是不变基的，在TortoiseGit中可以选为变基，如果选中后就是一模一样了</span><br></pre></td></tr></table></figure>
+
+<h3 id="8、-分支"><a href="#8、-分支" class="headerlink" title="8、 分支"></a>8、 分支</h3><h4 id="8-1-创建分支"><a href="#8-1-创建分支" class="headerlink" title="8.1 创建分支"></a>8.1 创建分支</h4><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git branch 分支名</span><br></pre></td></tr></table></figure>
+
+<h4 id="8-2-查看所有分支"><a href="#8-2-查看所有分支" class="headerlink" title="8.2 查看所有分支"></a>8.2 查看所有分支</h4><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git branch -a</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="8-3-切换分支"><a href="#8-3-切换分支" class="headerlink" title="8.3 切换分支"></a>8.3 切换分支</h4><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git checkout 分支名</span><br></pre></td></tr></table></figure>
+
+<h4 id="8-4-切换并创建分支"><a href="#8-4-切换并创建分支" class="headerlink" title="8.4 切换并创建分支"></a>8.4 切换并创建分支</h4><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git checkout -b 分支名</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、用Tortoise-Git-常用操作"><a href="#二、用Tortoise-Git-常用操作" class="headerlink" title="二、用Tortoise Git 常用操作"></a>二、用Tortoise Git 常用操作</h2><h3 id="1、本地建库"><a href="#1、本地建库" class="headerlink" title="1、本地建库"></a>1、本地建库</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git create respository</span><br><span class="line">这里可以鼠标右键操作--在这里创建本地仓库</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2、关联远程仓库"><a href="#2、关联远程仓库" class="headerlink" title="2、关联远程仓库"></a>2、关联远程仓库</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">这一步就只能在git bash 里实现了</span><br><span class="line">执行 git remote add origin https://github.com/xxxx/xxxx.git</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="3、合并分支"><a href="#3、合并分支" class="headerlink" title="3、合并分支"></a>3、合并分支</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">因为本地建仓一般是在master分支上，远程我的很多仓库是在origin分支上，所以需要合并分支</span><br><span class="line"><span class="bullet">1.</span> 查看本地所有分支 可以使用git bash的 git branch -a 查看</span><br><span class="line"><span class="bullet">2.</span> 鼠标右键切换远程origin分支 即remote/origin选项</span><br><span class="line"><span class="bullet">3.</span> 鼠标右键合并分支，被合并的是本地的master分支</span><br><span class="line"><span class="bullet">4.</span> 可以在远端把master分支给删除了</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2022/02/17/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>VUE-CLI</title>
+    <url>/2022/02/15/vue-cli/</url>
+    <content><![CDATA[<h1 id="Vue-CLI"><a href="#Vue-CLI" class="headerlink" title="Vue-CLI"></a>Vue-CLI</h1><h2 id="一、关于CLI"><a href="#一、关于CLI" class="headerlink" title="一、关于CLI"></a>一、关于CLI</h2><h3 id="1、什么是CLI"><a href="#1、什么是CLI" class="headerlink" title="1、什么是CLI"></a>1、什么是CLI</h3><p>cli：command-line interface 命令行界面cli：command-line interface 命令行界面</p>
+<h3 id="2、什么是Vue-CLI"><a href="#2、什么是Vue-CLI" class="headerlink" title="2、什么是Vue-CLI"></a>2、什么是Vue-CLI</h3><p>Vue-CLI 是一个基于vue.js进行快速开发的完整系统，使用Vue脚手架开发的页面奖是一个完整的项目</p>
+<h3 id="3、Vue-CLI的优势"><a href="#3、Vue-CLI的优势" class="headerlink" title="3、Vue-CLI的优势"></a>3、Vue-CLI的优势</h3><ul>
+<li><p>通过<code>@vue-cli</code>可以搭建一个交互式的项目脚手架，通过执行命令的方式下载相关的依赖</p>
+</li>
+<li><p>通过 <code>@vue/cli</code> + <code>@vue/cli-service-global</code> 实现的零配置原型开发。</p>
+</li>
+<li><p>一个运行时依赖 ( <code>@vue/cli-service</code>)，该依赖：</p>
+<ul>
+<li>可升级，一个命令就可以升级；</li>
+<li>基于 webpack 构建，并带有合理的默认配置；&#x3D;&#x3D;》项目打包，编译好的项目源码直接放到服务器上使用</li>
+<li>可以通过项目内的配置文件进行配置；</li>
+<li>可以通过插件进行扩展。vue v-charts element-ui</li>
+</ul>
+</li>
+<li><p>一个丰富的官方插件集合，集成了前端生态中最好的工具。 Nodejs ，Vue Router，webpack，yarn</p>
+</li>
+<li><p>一套完全图形化的创建和管理 Vue.js 项目的用户界面。</p>
+</li>
+</ul>
+<h2 id="二、Vue-CLI的使用"><a href="#二、Vue-CLI的使用" class="headerlink" title="二、Vue-CLI的使用"></a>二、Vue-CLI的使用</h2><h3 id="1、创建脚手架项目"><a href="#1、创建脚手架项目" class="headerlink" title="1、创建脚手架项目"></a>1、创建脚手架项目</h3><p><code>vue init webpack myVue</code></p>
+<h5 id="huiVent"><a href="#huiVent" class="headerlink" title="huiVent"></a>huiVent</h5><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">huiVent</span><br><span class="line">- build--------&gt;用来使用webpack打包使用的build以来</span><br><span class="line">- config-------&gt;用来做整个项目配置的目录</span><br><span class="line">- node_modules----&gt;用来管理项目中使用的依赖</span><br><span class="line">- src ---------&gt;用来书写vue的源代码</span><br><span class="line">	assets    ----用来存放静态资源</span><br><span class="line">	components ---用来书写vue组件</span><br><span class="line">	js         ---</span><br><span class="line">	router     ---配置项目中的路由</span><br><span class="line">	<span class="title class_">App</span>.<span class="property">vue</span>    ---项目中根组件</span><br><span class="line">	main.<span class="property">js</span>    ---项目中主入口</span><br><span class="line">- <span class="keyword">static</span>       ---其他静态</span><br><span class="line">- test</span><br><span class="line">- .<span class="property">babelrc</span>     ---将es6语法转换成es5运行</span><br><span class="line">- .<span class="property">editorconfig</span>---项目编辑配置</span><br><span class="line">- .<span class="property">eslintignore</span></span><br><span class="line">- .<span class="property">eslintrc</span>.<span class="property">js</span></span><br><span class="line">- .<span class="property">gitignore</span></span><br><span class="line">- .<span class="property">postcssrc</span>.<span class="property">js</span>---使用源码相关js</span><br><span class="line">- index.<span class="property">html</span></span><br><span class="line">- package.<span class="property">json</span></span><br><span class="line">- package-lock.<span class="property">json</span></span><br><span class="line">- <span class="variable constant_">README</span>.<span class="property">md</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2、项目运行"><a href="#2、项目运行" class="headerlink" title="2、项目运行"></a>2、项目运行</h3><p><code>npm start</code></p>
+<h3 id="3、Vue-CLI中项目的开发方式"><a href="#3、Vue-CLI中项目的开发方式" class="headerlink" title="3、Vue-CLI中项目的开发方式"></a>3、Vue-CLI中项目的开发方式</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">注意：一切接组件 一个组件中 js代码 html代码 css代码</span><br><span class="line">1、Vue-CLI开发方式是一个一个的组件，用组件分割成一个一个的功能模块，日后可以将多个组件组合到一起形成一个前端系统</span><br><span class="line">2、在使用Vuel-CLI进行开发时不在书写html，而是编写的一个个组件，在打包时Vue-CLI会把组件编译成一个html文件</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、如何开发Vue-CLI"><a href="#4、如何开发Vue-CLI" class="headerlink" title="4、如何开发Vue-CLI"></a>4、如何开发Vue-CLI</h3><h4 id="4-1-一切接组件"><a href="#4-1-一切接组件" class="headerlink" title="4.1  一切接组件"></a>4.1  一切接组件</h4><p><code>注意：在Vue-CLI中一切皆组件</code></p>
+<p>主入口为main.js，因为一切皆组件，所以在主入口中，根页面也作为组件，即把App.vue作为组件导入</p>
+<p>不建议对根Vue实例进行更改</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div id=&quot;app&quot;&gt;</span><br><span class="line">    &lt;router-view/&gt;//到了这里就会去掉router文件夹下index.js进行当前路径需要进行加载哪些控件</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">new Vue(&#123;</span><br><span class="line">  el: &#x27;#app&#x27;, //绑定Vue实例全局作用范围</span><br><span class="line">  router,</span><br><span class="line">  components: &#123;App&#125;,//注册组件</span><br><span class="line">  template: &#x27;&lt;App/&gt;&#x27;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-2-Router"><a href="#4-2-Router" class="headerlink" title="4.2 Router"></a>4.2 Router</h4><p>Vue-CLI分配页面是通过router来分配的，在router文件夹下的index.js文件管理页面路由，path规定了127.0.0.1:8080&#x2F;这后面跟的路径，当在浏览器url地址栏输入地址后，router会自动寻找相应路径下的页面。</p>
+<p>这里做了个尝试，当放置两个相同的路径时，默认加载前面那个路径的内容，如果想把两个组件放到一起，要用下面说的单页内引用其他组件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export default new Router(&#123;</span><br><span class="line">  routes: [</span><br><span class="line"></span><br><span class="line">    &#123;</span><br><span class="line">      path:&#x27;/&#x27;,</span><br><span class="line">      name:&#x27;Regist&#x27;,</span><br><span class="line">      component:Regist</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      path: &#x27;/&#x27;,</span><br><span class="line">      name: &#x27;HelloWorld&#x27;,</span><br><span class="line">      component: HelloWorld</span><br><span class="line">    &#125;,</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>如果需要将两个或多个路径都指向一个组件内容，可以用重定向redirect </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">routes: [</span><br><span class="line">&#123;</span><br><span class="line">  path: &#x27;/&#x27;,redirect:&#x27;/home&#x27;//像这样,路径&#x27;/&#x27;和&#x27;/home&#x27;都会指向/home,显示HellowzWorld</span><br><span class="line">&#125;,</span><br><span class="line">&#123;</span><br><span class="line">  path:&#x27;/home&#x27;,</span><br><span class="line">  name: &#x27;HelloWorld&#x27;,</span><br><span class="line">  component: HelloWorld</span><br><span class="line">&#125;,</span><br><span class="line">]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\ouSt\AppData\Roaming\Typora\typora-user-images\image-20220128102033954.png" alt="image-20220128102033954"></p>
+<h5 id="4-2-1-引用其他组件–通过路由方式"><a href="#4-2-1-引用其他组件–通过路由方式" class="headerlink" title="4.2.1 引用其他组件–通过路由方式"></a>4.2.1 引用其他组件–通过路由方式</h5><p>在App.vue的template中加入<router-view/> 表示要引用这个路由下的内容，这个只能在根路径下使用，因为其他路径下已经规定好了router</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div id=&quot;app&quot;&gt;</span><br><span class="line">    &lt;img src=&quot;./assets/logo.png&quot;&gt;</span><br><span class="line">    &lt;router-view/&gt; </span><br><span class="line"></span><br><span class="line">    &lt;Footer&gt;&lt;/Footer&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="4-2-2-单页内引用其他组件–不是通过路由方式"><a href="#4-2-2-单页内引用其他组件–不是通过路由方式" class="headerlink" title="4.2.2 单页内引用其他组件–不是通过路由方式"></a>4.2.2 单页内引用其他组件–不是通过路由方式</h5><p>import引入的是对应vue中的全部，而在components中配置了之后可以使用，在组件配置过后，将要放置的组件用<Footer></Footer>这种形式把想要组织的组件放到要放的位置</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div id=&quot;app&quot;&gt;</span><br><span class="line">    &lt;img src=&quot;./assets/logo.png&quot;&gt;</span><br><span class="line">    &lt;router-view/&gt;</span><br><span class="line">    &lt;Footer&gt;&lt;/Footer&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  import Footer from &#x27;./components/Footer&#x27;</span><br><span class="line">export default &#123;</span><br><span class="line">  name: &#x27;App&#x27;,</span><br><span class="line">  components: &#123;Footer&#125;,</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">//而在Footer.vue中</span><br><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      这里是egs365 的地界，备案号是1234567654321</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">    //这里并没有导出什么</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line"></span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h5 id="4-2-3-路由切换"><a href="#4-2-3-路由切换" class="headerlink" title="4.2.3 路由切换"></a>4.2.3 路由切换</h5><p>通过链接方式切换不同路由页面</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;a href=&quot;#/&quot;&gt;主页&lt;/a&gt;</span><br><span class="line">&lt;a href=&quot;#/regist&quot;&gt;分页&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="4-2-4-子路由"><a href="#4-2-4-子路由" class="headerlink" title="4.2.4 子路由"></a>4.2.4 子路由</h5><p>在一些页面下，点击功能键，会有用到子路由的情况，子路由的配置方式如下。注意add</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export default new Router(&#123;</span><br><span class="line">  routes: [</span><br><span class="line">  &#123;</span><br><span class="line">    path: &#x27;/&#x27;,redirect:&#x27;/home&#x27;</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">	//一级路由</span><br><span class="line">    path:&#x27;/home&#x27;,</span><br><span class="line">    component: HelloWorld</span><br><span class="line">  &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      path:&#x27;/home&#x27;,</span><br><span class="line">      name:&#x27;Regist&#x27;,</span><br><span class="line">      component:Regist,</span><br><span class="line">      children:[&#123;</span><br><span class="line">	   //add前面不需要加斜杠，因为不是一级路由</span><br><span class="line">       path:&#x27;add&#x27;,component:UserAdd//这里就是子路由</span><br><span class="line">      &#125;]</span><br><span class="line">    &#125;,</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>使用的时候在regist的template下引用</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;div&gt;这个是账号注册页面&lt;/div&gt;</span><br><span class="line">      &lt;a href=&quot;#/regist/add&quot;&gt;添加&lt;/a&gt;//引用功能链接</span><br><span class="line">      &lt;router-view/&gt;//路由引用</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="4-2-5-路由传参"><a href="#4-2-5-路由传参" class="headerlink" title="4.2.5 路由传参"></a>4.2.5 路由传参</h5><p>属性绑定 :href&#x3D;””+user.id</p>
+<p>this.$route.query.id</p>
+<h5 id="4-2-6-监听路由变化"><a href="#4-2-6-监听路由变化" class="headerlink" title="4.2.6 监听路由变化"></a>4.2.6 监听路由变化</h5><p>this.$router.push(‘&#x2F;user’)</p>
+<h3 id="5、使用axios"><a href="#5、使用axios" class="headerlink" title="5、使用axios"></a>5、使用axios</h3><ul>
+<li><p>安装<code>npm install axios --save-dev</code></p>
+</li>
+<li><p>在main.js中配置</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Vue.prototype.$http=axios;//修改内部的$http为axios</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用axios，在需要发布异步请求的位置：<strong>this.$http.get()</strong>—因为这里已经替换为axios了</p>
+</li>
+</ul>
+<h3 id="6、rap2"><a href="#6、rap2" class="headerlink" title="6、rap2"></a>6、rap2</h3><p>rap2就是一款在线模拟数据生成器，可以拦截Ajax请求，其作用在于帮助前端工程师独立于后端进行开发，<strong>实现前后端分离</strong>。</p>
+<h3 id="7、v-model-实现双向绑定"><a href="#7、v-model-实现双向绑定" class="headerlink" title="7、v-model 实现双向绑定"></a>7、v-model 实现双向绑定</h3><h3 id="8、-click"><a href="#8、-click" class="headerlink" title="8、@click"></a>8、@click</h3><h1 id="Vue-CLI-后端部分"><a href="#Vue-CLI-后端部分" class="headerlink" title="Vue-CLI 后端部分"></a>Vue-CLI 后端部分</h1><h3 id="Vue-CLI项目该打包部署"><a href="#Vue-CLI项目该打包部署" class="headerlink" title="Vue-CLI项目该打包部署"></a>Vue-CLI项目该打包部署</h3><ol>
+<li>在项目的根目录中执行如下命令</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vue run build// 打包</span><br><span class="line">/**vue打包的项目必须在服务器上运行*/</span><br><span class="line">打包之后当前项目有一个dist目录</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <tags>
+        <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>jwt基础操作</title>
+    <url>/2022/02/15/jwt/</url>
+    <content><![CDATA[<h2 id="jwt"><a href="#jwt" class="headerlink" title="jwt"></a>jwt</h2><p>jwt json–web–token</p>
+<p>我做过了更改了</p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/02/19/%E4%B8%80%E7%BA%A7%E6%A0%87%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题—人员配置"><a href="#二级标题—人员配置" class="headerlink" title="二级标题—人员配置"></a>二级标题—人员配置</h2><p>这里是内容</p>
+<table>
+<thead>
+<tr>
+<th>姓名</th>
+<th>年龄</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>收到反馈</td>
+<td>是客服</td>
+</tr>
+</tbody></table>
+]]></content>
+  </entry>
+</search>
