@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title> tanz-Blog</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css"
+      />
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <link rel="alternate" href="/atom.xml" title="tanz-Blog" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-WebPack4.0"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+     
+    <div class="article-meta">
+      <a href="/2022/07/18/WebPack4.0/" class="article-date">
+  <time datetime="2022-07-18T09:36:43.235Z" itemprop="datePublished">2022-07-18</time>
+</a>   
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">1.9k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">8 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Webpack4-0"><a href="#Webpack4-0" class="headerlink" title="Webpack4.0"></a>Webpack4.0</h1><h2 id="一、最基础的基础"><a href="#一、最基础的基础" class="headerlink" title="一、最基础的基础"></a>一、最基础的基础</h2><h3 id="1-1-使用版本"><a href="#1-1-使用版本" class="headerlink" title="1.1 使用版本"></a>1.1 使用版本</h3><table>
+<thead>
+<tr>
+<th align="center">package</th>
+<th align="center">version</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">node</td>
+<td align="center">v14.19.0</td>
+</tr>
+<tr>
+<td align="center">npm</td>
+<td align="center">v6.14.16</td>
+</tr>
+<tr>
+<td align="center">webpack</td>
+<td align="center">v4.41.2</td>
+</tr>
+<tr>
+<td align="center">webpack-cli</td>
+<td align="center">v3.3.10</td>
+</tr>
+</tbody></table>
+<h3 id="1-2-全局安装"><a href="#1-2-全局安装" class="headerlink" title="1.2 全局安装"></a>1.2 全局安装</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install webpack@4.41.2 -g</span><br><span class="line">npm install webpack-cli@3.3.10 -g</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-3-本地工程"><a href="#1-3-本地工程" class="headerlink" title="1.3 本地工程"></a>1.3 本地工程</h3><p>新建一个本地工程文件夹，然后使用npm启动，生成package.json文件</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//cd到指定文件目录</span><br><span class="line">cd E://xxx/xxx/xxx</span><br><span class="line"></span><br><span class="line">//</span><br><span class="line">npm init -y</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="1-4-构建本地工程的包文件"><a href="#1-4-构建本地工程的包文件" class="headerlink" title="1.4 构建本地工程的包文件"></a>1.4 构建本地工程的包文件</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install webpack@4.41.2 -D</span><br><span class="line">npm install webpack-cli@3.3.10 -D</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-5-撰写code"><a href="#1-5-撰写code" class="headerlink" title="1.5 撰写code"></a>1.5 撰写code</h3><p>在package.json所在路径下新建src文件夹，并在src文件夹内新建code文档，书写代码。</p>
+<p>这里有一个问题就是为什么要新建一个src必须把code放入src文件夹下，因为在这里用的还是一些默认的配置，等以后用webpack.config.js进行详细配置的时候就可以任意配置编译文件位置了。</p>
+<h3 id="1-6-启动webpack编译"><a href="#1-6-启动webpack编译" class="headerlink" title="1.6 启动webpack编译"></a>1.6 启动webpack编译</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cmd中敲入如下代码执行</span><br><span class="line">webpack --mode=development   //开发者模式</span><br><span class="line">webpack --mode=production    //生产模式</span><br><span class="line"></span><br><span class="line"><span class="emphasis">*注：webpack到4.0之后加入mode模式，通过设置mode来确定编译模式，其中开发者模式是没有进行代码混淆的，生产模式有代码混淆</span></span><br><span class="line"><span class="emphasis"></span></span><br></pre></td></tr></table></figure>
+
+<p>编译后的结果会生成一个dist文件夹，在文件夹内的文件就是编译后的结果，这时再新建一个html引入编译后的文件即可运行</p>
+<h2 id="二、基础的进阶–热更新"><a href="#二、基础的进阶–热更新" class="headerlink" title="二、基础的进阶–热更新"></a>二、基础的进阶–热更新</h2><p>第一part所使用的都是最基本的东西，没有使用插件，也没有使用webpack的打包文件，生成的html也不能实现热更新（即每次更新完代码，都需要手动编译一遍，再刷新页面才能得到新的结果）。</p>
+<h3 id="2-1-webpack-dev-server"><a href="#2-1-webpack-dev-server" class="headerlink" title="2.1 webpack-dev-server"></a>2.1 webpack-dev-server</h3><p>热更新是通过webpack-dev-server插件实现的，其简写为WDS，有如下特点：</p>
+<ul>
+<li>不会刷新真个页面</li>
+<li>不输出文件，而是放在内存中</li>
+<li>使用webpack自带的HotModuleReplacementPlugin插件</li>
+</ul>
+<h4 id="2-1-1-version"><a href="#2-1-1-version" class="headerlink" title="2.1.1 version"></a>2.1.1 version</h4><table>
+<thead>
+<tr>
+<th align="center">package</th>
+<th align="center">version</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">webpack-dev-server</td>
+<td align="center">v3.9.0</td>
+</tr>
+</tbody></table>
+<h4 id="2-1-2-安装"><a href="#2-1-2-安装" class="headerlink" title="2.1.2 安装"></a>2.1.2 安装</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install webpack-dev-server@3.9.0 -D</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-webpack-配置"><a href="#2-2-webpack-配置" class="headerlink" title="2.2 webpack 配置"></a>2.2 webpack 配置</h3><p>新建webpack.config.js,这里除了配置入口和出口，主要配置devserver</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123;resolve&#125; = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>);</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span>=&#123;</span><br><span class="line"></span><br><span class="line">    <span class="attr">entry</span>:<span class="string">&quot;./index.js&quot;</span>,<span class="comment">//打包的文件入口</span></span><br><span class="line">    <span class="attr">output</span>:&#123;</span><br><span class="line">        <span class="attr">filename</span>:<span class="string">&quot;build.js&quot;</span>,<span class="comment">//打包后的文件名</span></span><br><span class="line">        <span class="attr">path</span>: <span class="title function_">resolve</span>(__dirname,<span class="string">&quot;dist&quot;</span>),<span class="comment">//resolve的作用是拼接路径，__dirname是当前文件所在的绝对路径</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">/**loader,处理资源的加载器*/</span></span><br><span class="line">    <span class="attr">module</span>:&#123;&#125;,</span><br><span class="line">    <span class="comment">/*插件*/</span></span><br><span class="line">    <span class="attr">plugins</span>: [],</span><br><span class="line">    <span class="comment">/*模式，development是开发者模式--可以调试，production是生产环境模式--发布的混淆代码*/</span></span><br><span class="line">    <span class="attr">mode</span>:<span class="string">&quot;development&quot;</span>,</span><br><span class="line">    <span class="comment">/*webpack 服务*/</span></span><br><span class="line">    <span class="attr">devServer</span>: &#123;</span><br><span class="line">        <span class="attr">hot</span>:<span class="literal">true</span>,<span class="comment">//热更新</span></span><br><span class="line">        <span class="attr">open</span>:<span class="literal">true</span>,<span class="comment">//自动在浏览器打开</span></span><br><span class="line">        <span class="attr">contentBase</span>:<span class="title function_">resolve</span>(__dirname,<span class="string">&#x27;dist&#x27;</span>),<span class="comment">//发布的路径，dist目录，--实测没有这个路径会无法发布</span></span><br><span class="line">        <span class="attr">port</span>:<span class="number">7800</span>,</span><br><span class="line">        <span class="attr">host</span>:<span class="string">&quot;0.0.0.0&quot;</span>,</span><br><span class="line">        <span class="attr">historyApiFallback</span>:<span class="literal">true</span>,</span><br><span class="line">        <span class="attr">useLocalIp</span>:<span class="literal">true</span>,<span class="comment">//是否使用本地ip</span></span><br><span class="line">        <span class="attr">proxy</span>:&#123;</span><br><span class="line">            <span class="string">&#x27;/action&#x27;</span>:<span class="string">&#x27;http://127.0.0.1:8080&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>再在cmd中敲入如下命令，得到的结果是在dist路径下生成一build.js，然后把build.js引入html后可以在页面中调用</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">webpack --config webpack.config.js --mode development</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-3-设置为devserver-启动"><a href="#2-3-设置为devserver-启动" class="headerlink" title="2.3 设置为devserver 启动"></a>2.3 设置为devserver 启动</h3><p>在package.json中的scripts中可以添加键值对，作为启动命令，这里添加server</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">  <span class="string">&quot;test&quot;</span>: <span class="string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span>,</span><br><span class="line">  <span class="string">&quot;server&quot;</span>: <span class="string">&quot;webpack-dev-server --mode development --inline --progress --config webpack.config.js &quot;</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>这样在index.js中改完后，在html中就会直接运行。</p>
+<h3 id="2-4-前提"><a href="#2-4-前提" class="headerlink" title="2.4 前提"></a>2.4 前提</h3><p>在这种启动方式的前提是在dist已经有html，并且我们已经人为把打包好的包的引入html中</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;build.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>//如果这里不写，则webpack不知道该引入哪个文件进来</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="三、再进阶–动态生成html"><a href="#三、再进阶–动态生成html" class="headerlink" title="三、再进阶–动态生成html"></a>三、再进阶–动态生成html</h2><p>在第二part解决了热更新的问题，并引入webpack.config.js配置文件作为配置项，逐渐变得正常化了，接下来开始要引用plugins等来解决html生成问题，现在是手动生成，完全可以用插件实现自动生成。</p>
+<h3 id="3-1-安装html-webpack-plugin"><a href="#3-1-安装html-webpack-plugin" class="headerlink" title="3.1 安装html-webpack-plugin"></a>3.1 安装html-webpack-plugin</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install html-webpack-plugin@3.2.0 -D</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-2-配置插件"><a href="#3-2-配置插件" class="headerlink" title="3.2 配置插件"></a>3.2 配置插件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">const &#123;resolve&#125; = require(&#x27;path&#x27;);</span><br><span class="line">const HtmlWebpackPlugin = require(&#x27;html-webpack-plugin&#x27;);//引入插件</span><br><span class="line">module.exports = &#123;</span><br><span class="line"></span><br><span class="line">    entry: &quot;./index.js&quot;,//打包的文件入口</span><br><span class="line">    output: &#123;</span><br><span class="line">      ....</span><br><span class="line">    &#125;,</span><br><span class="line">    /**loader,处理资源的加载器*/</span><br><span class="line">    module: &#123;&#125;,</span><br><span class="line">    /*插件*/</span><br><span class="line">    plugins: [</span><br><span class="line">        new HtmlWebpackPlugin(&#123;</span><br><span class="line">            template: &quot;./index.html&quot;,//模板文件路径和文件名，路径是相对于package.json的路径，打包时自动会配置到dist文件夹下</span><br><span class="line">            filename: &quot;index.html&quot;//这里可以带路径打包好后，在dist文件夹下的路径生成的html的文件名称</span><br><span class="line">        &#125;)</span><br><span class="line">    ],</span><br><span class="line">    /*模式，development是开发者模式--可以调试，production是生产环境模式--发布的混淆代码*/</span><br><span class="line">    mode: &quot;development&quot;,</span><br><span class="line">    /*webpack 服务*/</span><br><span class="line">    devServer: &#123;</span><br><span class="line">       ...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-3-使用"><a href="#3-3-使用" class="headerlink" title="3.3 使用"></a>3.3 使用</h3><p>新建的html模板是这样子的，除了基本框架没有写任何的script引用，因为到时候会自动引入进来</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>可以在cmd命令行中敲入</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">webpack --config webpack.config.js --mode production</span><br></pre></td></tr></table></figure>
+
+<p>也可以在package.json中的scripts中添加一个启动命令，这里添加的是build</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">  &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;,</span><br><span class="line">  &quot;server&quot;: &quot;webpack-dev-server --mode development --inline --progress --config webpack.config.js &quot;,</span><br><span class="line">  &quot;build&quot;: &quot;webpack --mode production&quot;</span><br><span class="line">&#125;,</span><br><span class="line"> </span><br><span class="line"> <span class="emphasis">*注：这里没有写--config webpack.config.js,是因为webpack默认会在package.json所在路径找这个webpack.config.js这个文件，所以可以省略</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-4-更多的配置"><a href="#3-4-更多的配置" class="headerlink" title="3.4 更多的配置"></a>3.4 更多的配置</h3><p>这里不上图了，手敲</p>
+<table>
+<thead>
+<tr>
+<th align="center">属性名</th>
+<th align="center">字段类型</th>
+<th align="center">默认值</th>
+<th align="center">有用</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">title</td>
+<td align="center">String</td>
+<td align="center">webpackApp</td>
+<td align="center">√</td>
+<td>网页document.title的配置</td>
+</tr>
+<tr>
+<td align="center">filename</td>
+<td align="center">String</td>
+<td align="center">index.html</td>
+<td align="center">√</td>
+<td>html文件生成的名称，生成路径在output.path的目录</td>
+</tr>
+<tr>
+<td align="center">template</td>
+<td align="center">String</td>
+<td align="center">空</td>
+<td align="center">√</td>
+<td>生成filename文件的模板，如果存在src&#x2F;index.html，默认会使用这个模板，模板路径会从项目的根路径开始匹配</td>
+</tr>
+<tr>
+<td align="center">templateParameters</td>
+<td align="center">Boolean|Object|Function</td>
+<td align="center">空</td>
+<td align="center"></td>
+<td>覆盖默认的模板中使用的参数</td>
+</tr>
+<tr>
+<td align="center">inject</td>
+<td align="center">Boolean|String</td>
+<td align="center">true</td>
+<td align="center">√</td>
+<td>打包后的css和js插入html中的位置，true或body会放到body底部，head会放到head元素中去</td>
+</tr>
+<tr>
+<td align="center">favicon</td>
+<td align="center">String</td>
+<td align="center">空</td>
+<td align="center"></td>
+<td>为生成的html配置一个favicon</td>
+</tr>
+<tr>
+<td align="center">mete</td>
+<td align="center">Object</td>
+<td align="center">{}</td>
+<td align="center"></td>
+<td>为生成的html注入一些mete信息，如：{viewport：”width&#x3D;device-width，initialscale&#x3D;1，shrink-to-fit&#x3D;no“}</td>
+</tr>
+<tr>
+<td align="center">base</td>
+<td align="center">Object|String|false</td>
+<td align="center">false</td>
+<td align="center"></td>
+<td>在生成的html中注入base标签。eg:base:”<a target="_blank" rel="noopener" href="https://exanple.com/path/page.html&quot;">https://exanple.com/path/page.html&quot;</a>,<base>标签为页面上所有的链接规定默认地址或默认目标</td>
+</tr>
+<tr>
+<td align="center">minify</td>
+<td align="center">Boolean|Object</td>
+<td align="center">production？true：false</td>
+<td align="center"></td>
+<td>设置静态资源的压缩情况</td>
+</tr>
+<tr>
+<td align="center">hash</td>
+<td align="center">Boolean</td>
+<td align="center">false</td>
+<td align="center">√</td>
+<td>如果为真，则所有包括js和css文件附加一个唯一的weback编译的uuid，这对于更新每次的混村文件名非常有用</td>
+</tr>
+<tr>
+<td align="center">cache</td>
+<td align="center">Boolean</td>
+<td align="center">true</td>
+<td align="center">√</td>
+<td>设置js css 文件的缓存，当文件没有发生变化时，是否设置使用缓存</td>
+</tr>
+<tr>
+<td align="center">showErrors</td>
+<td align="center">Boolean</td>
+<td align="center">true</td>
+<td align="center"></td>
+<td>当文件发生错误是，是否将错误信息显示在页面</td>
+</tr>
+<tr>
+<td align="center">xhtml</td>
+<td align="center">Boolean</td>
+<td align="center">false</td>
+<td align="center"></td>
+<td>如果为true的时候将会<link>标签设置为符合xhtml规范的自闭合形式</td>
+</tr>
+</tbody></table>
+<h2 id="四、loader样式打包"><a href="#四、loader样式打包" class="headerlink" title="四、loader样式打包"></a>四、loader样式打包</h2> 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          打赏
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，著作权归作者所有。转载请注明出处！
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://oustanz.github.io/2022/07/18/WebPack4.0/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2022/07/18/hello-world/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            Hello World
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2022/02/15/github%E6%93%8D%E4%BD%9C%E6%96%87%E6%A1%A3/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">GitHub操作文档</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "",
+    app_key: "",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2015-2022
+        <i class="ri-heart-fill heart_icon"></i> tanz
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="tanz-Blog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/post/">hexo</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="http://shenyu-vip.lofter.com">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2019/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>

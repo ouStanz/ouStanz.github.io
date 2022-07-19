@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>README</title>
-    <url>/2022/02/15/README/</url>
-    <content><![CDATA[<h1 id="typora"><a href="#typora" class="headerlink" title="typora-"></a>typora-</h1><p>typora新建的笔记仓库</p>
-<p>本仓库在远端的typora-中存储，编辑有typora编辑器进行</p>
-<p>博客发布由hexo联合git发布静态博客服务，发布的博客服务有git托管</p>
-]]></content>
-      <tags>
-        <tag>readme</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo 基础操作</title>
     <url>/2022/02/15/Hexo%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</url>
     <content><![CDATA[<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h3><ol>
@@ -287,6 +276,35 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2022/07/18/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>README</title>
+    <url>/2022/02/15/README/</url>
+    <content><![CDATA[<h1 id="typora"><a href="#typora" class="headerlink" title="typora-"></a>typora-</h1><p>typora新建的笔记仓库</p>
+<p>本仓库在远端的typora-中存储，编辑有typora编辑器进行</p>
+<p>博客发布由hexo联合git发布静态博客服务，发布的博客服务有git托管</p>
+]]></content>
+      <tags>
+        <tag>readme</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>GitHub操作文档</title>
     <url>/2022/02/15/github%E6%93%8D%E4%BD%9C%E6%96%87%E6%A1%A3/</url>
     <content><![CDATA[<h2 id="一、基础操作"><a href="#一、基础操作" class="headerlink" title="一、基础操作"></a>一、基础操作</h2><h3 id="1、克隆远端文件"><a href="#1、克隆远端文件" class="headerlink" title="1、克隆远端文件"></a>1、克隆远端文件</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git clone</span><br></pre></td></tr></table></figure>
@@ -323,27 +341,220 @@
 
 <h3 id="3、合并分支"><a href="#3、合并分支" class="headerlink" title="3、合并分支"></a>3、合并分支</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">因为本地建仓一般是在master分支上，远程我的很多仓库是在origin分支上，所以需要合并分支</span><br><span class="line"><span class="bullet">1.</span> 查看本地所有分支 可以使用git bash的 git branch -a 查看</span><br><span class="line"><span class="bullet">2.</span> 鼠标右键切换远程origin分支 即remote/origin选项</span><br><span class="line"><span class="bullet">3.</span> 鼠标右键合并分支，被合并的是本地的master分支</span><br><span class="line"><span class="bullet">4.</span> 可以在远端把master分支给删除了</span><br></pre></td></tr></table></figure>
 
+<h2 id="三、建立子模块"><a href="#三、建立子模块" class="headerlink" title="三、建立子模块"></a>三、建立子模块</h2><h3 id="1、将子模块添加到主目录"><a href="#1、将子模块添加到主目录" class="headerlink" title="1、将子模块添加到主目录"></a>1、将子模块添加到主目录</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">1.</span> 先在git上建立一个仓库，这里建立的是typora-仓库</span><br><span class="line"><span class="bullet">2.</span> 打开gitbash，输入git submodule add &#123;子模块仓库url&#125;&#123;要将子模块内容放入到的文件夹名&#125;</span><br><span class="line"><span class="code">	如 git submodule add https://github.com/ouStanz/typora- source </span></span><br><span class="line"><span class="code">	`注意这里的source 是要将typora- 中的内容放入的文件夹，不用手动创建，要改名的原因是hexo需要用到source作为发布内容文件夹`</span></span><br><span class="line"><span class="code"></span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2、查看子模块"><a href="#2、查看子模块" class="headerlink" title="2、查看子模块"></a>2、查看子模块</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git submodule </span><br></pre></td></tr></table></figure>
+
+<h3 id="3、启动子模块并更新"><a href="#3、启动子模块并更新" class="headerlink" title="3、启动子模块并更新"></a>3、启动子模块并更新</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">1.</span> 分步骤启用</span><br><span class="line"><span class="code">	git submodule init</span></span><br><span class="line"><span class="code">	git submodule update</span></span><br><span class="line"><span class="code">2. 可以使用 git submodule update --init --recursive 递归启用，这等同于1的分步骤</span></span><br><span class="line"><span class="code">3. 可以使用也可以递归克隆这个项目git clone &#123;子模块url&#125;&#123;子模块名&#125;</span></span><br><span class="line"><span class="code"></span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4、多个子模块操作"><a href="#4、多个子模块操作" class="headerlink" title="4、多个子模块操作"></a>4、多个子模块操作</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">多个子模块可以使用git submodule foreach git &#123;命令&#125;</span><br><span class="line"><span class="bullet">1.</span> 先初始化子模块 git submodule update --init --recursive</span><br><span class="line"><span class="bullet">2.</span> 子模块获取 git submoduel foreach git fetch</span><br><span class="line"><span class="bullet">3.</span> 子模块合并 git submodule foreach git pull</span><br><span class="line"><span class="bullet">4.</span> 子模块更新 git submodule foreach git update</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="5、-删除子模块"><a href="#5、-删除子模块" class="headerlink" title="5、 删除子模块"></a>5、 删除子模块</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">1.</span> 删除本地仓库 git rm --cached &#123;文件名&#125;</span><br><span class="line"><span class="code">	git rm --cached source</span></span><br><span class="line"><span class="code">2. 删除远程的仓库git -rf &#123;文件名&#125;</span></span><br><span class="line"><span class="code">	git -rf source</span></span><br><span class="line"><span class="code">3. 删除相关配置文件中和要删除的子模块相关的信息，分别是</span></span><br><span class="line"><span class="code">	.gitmodules</span></span><br><span class="line"><span class="code">	.git/config</span></span><br><span class="line"><span class="code">	.git</span></span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <tags>
         <tag>git</tag>
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2022/02/17/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <title></title>
+    <url>/2022/07/18/WebPack4.0/</url>
+    <content><![CDATA[<h1 id="Webpack4-0"><a href="#Webpack4-0" class="headerlink" title="Webpack4.0"></a>Webpack4.0</h1><h2 id="一、最基础的基础"><a href="#一、最基础的基础" class="headerlink" title="一、最基础的基础"></a>一、最基础的基础</h2><h3 id="1-1-使用版本"><a href="#1-1-使用版本" class="headerlink" title="1.1 使用版本"></a>1.1 使用版本</h3><table>
+<thead>
+<tr>
+<th align="center">package</th>
+<th align="center">version</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">node</td>
+<td align="center">v14.19.0</td>
+</tr>
+<tr>
+<td align="center">npm</td>
+<td align="center">v6.14.16</td>
+</tr>
+<tr>
+<td align="center">webpack</td>
+<td align="center">v4.41.2</td>
+</tr>
+<tr>
+<td align="center">webpack-cli</td>
+<td align="center">v3.3.10</td>
+</tr>
+</tbody></table>
+<h3 id="1-2-全局安装"><a href="#1-2-全局安装" class="headerlink" title="1.2 全局安装"></a>1.2 全局安装</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">npm install webpack@4.41.2 -g</span><br><span class="line">npm install webpack-cli@3.3.10 -g</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="1-3-本地工程"><a href="#1-3-本地工程" class="headerlink" title="1.3 本地工程"></a>1.3 本地工程</h3><p>新建一个本地工程文件夹，然后使用npm启动，生成package.json文件</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">//cd到指定文件目录</span><br><span class="line">cd E://xxx/xxx/xxx</span><br><span class="line"></span><br><span class="line">//</span><br><span class="line">npm init -y</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="1-4-构建本地工程的包文件"><a href="#1-4-构建本地工程的包文件" class="headerlink" title="1.4 构建本地工程的包文件"></a>1.4 构建本地工程的包文件</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">npm install webpack@4.41.2 -D</span><br><span class="line">npm install webpack-cli@3.3.10 -D</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="1-5-撰写code"><a href="#1-5-撰写code" class="headerlink" title="1.5 撰写code"></a>1.5 撰写code</h3><p>在package.json所在路径下新建src文件夹，并在src文件夹内新建code文档，书写代码。</p>
+<p>这里有一个问题就是为什么要新建一个src必须把code放入src文件夹下，因为在这里用的还是一些默认的配置，等以后用webpack.config.js进行详细配置的时候就可以任意配置编译文件位置了。</p>
+<h3 id="1-6-启动webpack编译"><a href="#1-6-启动webpack编译" class="headerlink" title="1.6 启动webpack编译"></a>1.6 启动webpack编译</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">cmd中敲入如下代码执行</span><br><span class="line">webpack --mode=development   //开发者模式</span><br><span class="line">webpack --mode=production    //生产模式</span><br><span class="line"></span><br><span class="line"><span class="emphasis">*注：webpack到4.0之后加入mode模式，通过设置mode来确定编译模式，其中开发者模式是没有进行代码混淆的，生产模式有代码混淆</span></span><br><span class="line"><span class="emphasis"></span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>编译后的结果会生成一个dist文件夹，在文件夹内的文件就是编译后的结果，这时再新建一个html引入编译后的文件即可运行</p>
+<h2 id="二、基础的进阶–热更新"><a href="#二、基础的进阶–热更新" class="headerlink" title="二、基础的进阶–热更新"></a>二、基础的进阶–热更新</h2><p>第一part所使用的都是最基本的东西，没有使用插件，也没有使用webpack的打包文件，生成的html也不能实现热更新（即每次更新完代码，都需要手动编译一遍，再刷新页面才能得到新的结果）。</p>
+<h3 id="2-1-webpack-dev-server"><a href="#2-1-webpack-dev-server" class="headerlink" title="2.1 webpack-dev-server"></a>2.1 webpack-dev-server</h3><p>热更新是通过webpack-dev-server插件实现的，其简写为WDS，有如下特点：</p>
+<ul>
+<li>不会刷新真个页面</li>
+<li>不输出文件，而是放在内存中</li>
+<li>使用webpack自带的HotModuleReplacementPlugin插件</li>
+</ul>
+<h4 id="2-1-1-version"><a href="#2-1-1-version" class="headerlink" title="2.1.1 version"></a>2.1.1 version</h4><table>
+<thead>
+<tr>
+<th align="center">package</th>
+<th align="center">version</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">webpack-dev-server</td>
+<td align="center">v3.9.0</td>
+</tr>
+</tbody></table>
+<h4 id="2-1-2-安装"><a href="#2-1-2-安装" class="headerlink" title="2.1.2 安装"></a>2.1.2 安装</h4><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">npm install webpack-dev-server@3.9.0 -D</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-webpack-配置"><a href="#2-2-webpack-配置" class="headerlink" title="2.2 webpack 配置"></a>2.2 webpack 配置</h3><p>新建webpack.config.js,这里除了配置入口和出口，主要配置devserver</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123;resolve&#125; = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>);</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span>=&#123;</span><br><span class="line"></span><br><span class="line">    <span class="attr">entry</span>:<span class="string">&quot;./index.js&quot;</span>,<span class="comment">//打包的文件入口</span></span><br><span class="line">    <span class="attr">output</span>:&#123;</span><br><span class="line">        <span class="attr">filename</span>:<span class="string">&quot;build.js&quot;</span>,<span class="comment">//打包后的文件名</span></span><br><span class="line">        <span class="attr">path</span>: <span class="title function_">resolve</span>(__dirname,<span class="string">&quot;dist&quot;</span>),<span class="comment">//resolve的作用是拼接路径，__dirname是当前文件所在的绝对路径</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">/**loader,处理资源的加载器*/</span></span><br><span class="line">    <span class="attr">module</span>:&#123;&#125;,</span><br><span class="line">    <span class="comment">/*插件*/</span></span><br><span class="line">    <span class="attr">plugins</span>: [],</span><br><span class="line">    <span class="comment">/*模式，development是开发者模式--可以调试，production是生产环境模式--发布的混淆代码*/</span></span><br><span class="line">    <span class="attr">mode</span>:<span class="string">&quot;development&quot;</span>,</span><br><span class="line">    <span class="comment">/*webpack 服务*/</span></span><br><span class="line">    <span class="attr">devServer</span>: &#123;</span><br><span class="line">        <span class="attr">hot</span>:<span class="literal">true</span>,<span class="comment">//热更新</span></span><br><span class="line">        <span class="attr">open</span>:<span class="literal">true</span>,<span class="comment">//自动在浏览器打开</span></span><br><span class="line">        <span class="attr">contentBase</span>:<span class="title function_">resolve</span>(__dirname,<span class="string">&#x27;dist&#x27;</span>),<span class="comment">//发布的路径，dist目录，--实测没有这个路径会无法发布</span></span><br><span class="line">        <span class="attr">port</span>:<span class="number">7800</span>,</span><br><span class="line">        <span class="attr">host</span>:<span class="string">&quot;0.0.0.0&quot;</span>,</span><br><span class="line">        <span class="attr">historyApiFallback</span>:<span class="literal">true</span>,</span><br><span class="line">        <span class="attr">useLocalIp</span>:<span class="literal">true</span>,<span class="comment">//是否使用本地ip</span></span><br><span class="line">        <span class="attr">proxy</span>:&#123;</span><br><span class="line">            <span class="string">&#x27;/action&#x27;</span>:<span class="string">&#x27;http://127.0.0.1:8080&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>再在cmd中敲入如下命令，得到的结果是在dist路径下生成一build.js，然后把build.js引入html后可以在页面中调用</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">webpack --config webpack.config.js --mode development</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-3-设置为devserver-启动"><a href="#2-3-设置为devserver-启动" class="headerlink" title="2.3 设置为devserver 启动"></a>2.3 设置为devserver 启动</h3><p>在package.json中的scripts中可以添加键值对，作为启动命令，这里添加server</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">  <span class="string">&quot;test&quot;</span>: <span class="string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span>,</span><br><span class="line">  <span class="string">&quot;server&quot;</span>: <span class="string">&quot;webpack-dev-server --mode development --inline --progress --config webpack.config.js &quot;</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>这样在index.js中改完后，在html中就会直接运行。</p>
+<h3 id="2-4-前提"><a href="#2-4-前提" class="headerlink" title="2.4 前提"></a>2.4 前提</h3><p>在这种启动方式的前提是在dist已经有html，并且我们已经人为把打包好的包的引入html中</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;build.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>//如果这里不写，则webpack不知道该引入哪个文件进来</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="三、再进阶–动态生成html"><a href="#三、再进阶–动态生成html" class="headerlink" title="三、再进阶–动态生成html"></a>三、再进阶–动态生成html</h2><p>在第二part解决了热更新的问题，并引入webpack.config.js配置文件作为配置项，逐渐变得正常化了，接下来开始要引用plugins等来解决html生成问题，现在是手动生成，完全可以用插件实现自动生成。</p>
+<h3 id="3-1-安装html-webpack-plugin"><a href="#3-1-安装html-webpack-plugin" class="headerlink" title="3.1 安装html-webpack-plugin"></a>3.1 安装html-webpack-plugin</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">npm install html-webpack-plugin@3.2.0 -D</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-2-配置插件"><a href="#3-2-配置插件" class="headerlink" title="3.2 配置插件"></a>3.2 配置插件</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const &#123;resolve&#125; = require(&#x27;path&#x27;);</span><br><span class="line">const HtmlWebpackPlugin = require(&#x27;html-webpack-plugin&#x27;);//引入插件</span><br><span class="line">module.exports = &#123;</span><br><span class="line"></span><br><span class="line">    entry: &quot;./index.js&quot;,//打包的文件入口</span><br><span class="line">    output: &#123;</span><br><span class="line">      ....</span><br><span class="line">    &#125;,</span><br><span class="line">    /**loader,处理资源的加载器*/</span><br><span class="line">    module: &#123;&#125;,</span><br><span class="line">    /*插件*/</span><br><span class="line">    plugins: [</span><br><span class="line">        new HtmlWebpackPlugin(&#123;</span><br><span class="line">            template: &quot;./index.html&quot;,//模板文件路径和文件名，路径是相对于package.json的路径，打包时自动会配置到dist文件夹下</span><br><span class="line">            filename: &quot;index.html&quot;//这里可以带路径打包好后，在dist文件夹下的路径生成的html的文件名称</span><br><span class="line">        &#125;)</span><br><span class="line">    ],</span><br><span class="line">    /*模式，development是开发者模式--可以调试，production是生产环境模式--发布的混淆代码*/</span><br><span class="line">    mode: &quot;development&quot;,</span><br><span class="line">    /*webpack 服务*/</span><br><span class="line">    devServer: &#123;</span><br><span class="line">       ...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-3-使用"><a href="#3-3-使用" class="headerlink" title="3.3 使用"></a>3.3 使用</h3><p>新建的html模板是这样子的，除了基本框架没有写任何的script引用，因为到时候会自动引入进来</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>可以在cmd命令行中敲入</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">webpack --config webpack.config.js --mode production</span><br></pre></td></tr></table></figure>
+
+<p>也可以在package.json中的scripts中添加一个启动命令，这里添加的是build</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">  &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;,</span><br><span class="line">  &quot;server&quot;: &quot;webpack-dev-server --mode development --inline --progress --config webpack.config.js &quot;,</span><br><span class="line">  &quot;build&quot;: &quot;webpack --mode production&quot;</span><br><span class="line">&#125;,</span><br><span class="line"> </span><br><span class="line"> <span class="emphasis">*注：这里没有写--config webpack.config.js,是因为webpack默认会在package.json所在路径找这个webpack.config.js这个文件，所以可以省略</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-4-更多的配置"><a href="#3-4-更多的配置" class="headerlink" title="3.4 更多的配置"></a>3.4 更多的配置</h3><p>这里不上图了，手敲</p>
+<table>
+<thead>
+<tr>
+<th align="center">属性名</th>
+<th align="center">字段类型</th>
+<th align="center">默认值</th>
+<th align="center">有用</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">title</td>
+<td align="center">String</td>
+<td align="center">webpackApp</td>
+<td align="center">√</td>
+<td>网页document.title的配置</td>
+</tr>
+<tr>
+<td align="center">filename</td>
+<td align="center">String</td>
+<td align="center">index.html</td>
+<td align="center">√</td>
+<td>html文件生成的名称，生成路径在output.path的目录</td>
+</tr>
+<tr>
+<td align="center">template</td>
+<td align="center">String</td>
+<td align="center">空</td>
+<td align="center">√</td>
+<td>生成filename文件的模板，如果存在src&#x2F;index.html，默认会使用这个模板，模板路径会从项目的根路径开始匹配</td>
+</tr>
+<tr>
+<td align="center">templateParameters</td>
+<td align="center">Boolean|Object|Function</td>
+<td align="center">空</td>
+<td align="center"></td>
+<td>覆盖默认的模板中使用的参数</td>
+</tr>
+<tr>
+<td align="center">inject</td>
+<td align="center">Boolean|String</td>
+<td align="center">true</td>
+<td align="center">√</td>
+<td>打包后的css和js插入html中的位置，true或body会放到body底部，head会放到head元素中去</td>
+</tr>
+<tr>
+<td align="center">favicon</td>
+<td align="center">String</td>
+<td align="center">空</td>
+<td align="center"></td>
+<td>为生成的html配置一个favicon</td>
+</tr>
+<tr>
+<td align="center">mete</td>
+<td align="center">Object</td>
+<td align="center">{}</td>
+<td align="center"></td>
+<td>为生成的html注入一些mete信息，如：{viewport：”width&#x3D;device-width，initialscale&#x3D;1，shrink-to-fit&#x3D;no“}</td>
+</tr>
+<tr>
+<td align="center">base</td>
+<td align="center">Object|String|false</td>
+<td align="center">false</td>
+<td align="center"></td>
+<td>在生成的html中注入base标签。eg:base:”<a href="https://exanple.com/path/page.html&quot;">https://exanple.com/path/page.html&quot;</a>,<base>标签为页面上所有的链接规定默认地址或默认目标</td>
+</tr>
+<tr>
+<td align="center">minify</td>
+<td align="center">Boolean|Object</td>
+<td align="center">production？true：false</td>
+<td align="center"></td>
+<td>设置静态资源的压缩情况</td>
+</tr>
+<tr>
+<td align="center">hash</td>
+<td align="center">Boolean</td>
+<td align="center">false</td>
+<td align="center">√</td>
+<td>如果为真，则所有包括js和css文件附加一个唯一的weback编译的uuid，这对于更新每次的混村文件名非常有用</td>
+</tr>
+<tr>
+<td align="center">cache</td>
+<td align="center">Boolean</td>
+<td align="center">true</td>
+<td align="center">√</td>
+<td>设置js css 文件的缓存，当文件没有发生变化时，是否设置使用缓存</td>
+</tr>
+<tr>
+<td align="center">showErrors</td>
+<td align="center">Boolean</td>
+<td align="center">true</td>
+<td align="center"></td>
+<td>当文件发生错误是，是否将错误信息显示在页面</td>
+</tr>
+<tr>
+<td align="center">xhtml</td>
+<td align="center">Boolean</td>
+<td align="center">false</td>
+<td align="center"></td>
+<td>如果为true的时候将会<link>标签设置为符合xhtml规范的自闭合形式</td>
+</tr>
+</tbody></table>
+<h2 id="四、loader样式打包"><a href="#四、loader样式打包" class="headerlink" title="四、loader样式打包"></a>四、loader样式打包</h2>]]></content>
+  </entry>
+  <entry>
+    <title>jwt基础操作</title>
+    <url>/2022/02/15/jwt/</url>
+    <content><![CDATA[<h2 id="jwt"><a href="#jwt" class="headerlink" title="jwt"></a>jwt</h2><p>jwt json–web–token</p>
+<p>我做过了更改了</p>
 ]]></content>
   </entry>
   <entry>
@@ -427,30 +638,5 @@
       <tags>
         <tag>vue</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>jwt基础操作</title>
-    <url>/2022/02/15/jwt/</url>
-    <content><![CDATA[<h2 id="jwt"><a href="#jwt" class="headerlink" title="jwt"></a>jwt</h2><p>jwt json–web–token</p>
-<p>我做过了更改了</p>
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2022/02/19/%E4%B8%80%E7%BA%A7%E6%A0%87%E9%A2%98/</url>
-    <content><![CDATA[<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题—人员配置"><a href="#二级标题—人员配置" class="headerlink" title="二级标题—人员配置"></a>二级标题—人员配置</h2><p>这里是内容</p>
-<table>
-<thead>
-<tr>
-<th>姓名</th>
-<th>年龄</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>收到反馈</td>
-<td>是客服</td>
-</tr>
-</tbody></table>
-]]></content>
   </entry>
 </search>

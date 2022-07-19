@@ -82,7 +82,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">527</span>
+            <span class="post-count">874</span>
         </span>
     </span>
 
@@ -91,7 +91,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">1 分钟</span>
+            <span class="post-count">3 分钟</span>
         </span>
     </span>
 </div>
@@ -139,6 +139,18 @@
 <h3 id="2、关联远程仓库"><a href="#2、关联远程仓库" class="headerlink" title="2、关联远程仓库"></a>2、关联远程仓库</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">这一步就只能在git bash 里实现了</span><br><span class="line">执行 git remote add origin https://github.com/xxxx/xxxx.git</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h3 id="3、合并分支"><a href="#3、合并分支" class="headerlink" title="3、合并分支"></a>3、合并分支</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">因为本地建仓一般是在master分支上，远程我的很多仓库是在origin分支上，所以需要合并分支</span><br><span class="line"><span class="bullet">1.</span> 查看本地所有分支 可以使用git bash的 git branch -a 查看</span><br><span class="line"><span class="bullet">2.</span> 鼠标右键切换远程origin分支 即remote/origin选项</span><br><span class="line"><span class="bullet">3.</span> 鼠标右键合并分支，被合并的是本地的master分支</span><br><span class="line"><span class="bullet">4.</span> 可以在远端把master分支给删除了</span><br></pre></td></tr></table></figure>
+
+<h2 id="三、建立子模块"><a href="#三、建立子模块" class="headerlink" title="三、建立子模块"></a>三、建立子模块</h2><h3 id="1、将子模块添加到主目录"><a href="#1、将子模块添加到主目录" class="headerlink" title="1、将子模块添加到主目录"></a>1、将子模块添加到主目录</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1.</span> 先在git上建立一个仓库，这里建立的是typora-仓库</span><br><span class="line"><span class="bullet">2.</span> 打开gitbash，输入git submodule add &#123;子模块仓库url&#125;&#123;要将子模块内容放入到的文件夹名&#125;</span><br><span class="line"><span class="code">	如 git submodule add https://github.com/ouStanz/typora- source </span></span><br><span class="line"><span class="code">	`注意这里的source 是要将typora- 中的内容放入的文件夹，不用手动创建，要改名的原因是hexo需要用到source作为发布内容文件夹`</span></span><br><span class="line"><span class="code"></span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2、查看子模块"><a href="#2、查看子模块" class="headerlink" title="2、查看子模块"></a>2、查看子模块</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git submodule </span><br></pre></td></tr></table></figure>
+
+<h3 id="3、启动子模块并更新"><a href="#3、启动子模块并更新" class="headerlink" title="3、启动子模块并更新"></a>3、启动子模块并更新</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1.</span> 分步骤启用</span><br><span class="line"><span class="code">	git submodule init</span></span><br><span class="line"><span class="code">	git submodule update</span></span><br><span class="line"><span class="code">2. 可以使用 git submodule update --init --recursive 递归启用，这等同于1的分步骤</span></span><br><span class="line"><span class="code">3. 可以使用也可以递归克隆这个项目git clone &#123;子模块url&#125;&#123;子模块名&#125;</span></span><br><span class="line"><span class="code"></span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4、多个子模块操作"><a href="#4、多个子模块操作" class="headerlink" title="4、多个子模块操作"></a>4、多个子模块操作</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">多个子模块可以使用git submodule foreach git &#123;命令&#125;</span><br><span class="line"><span class="bullet">1.</span> 先初始化子模块 git submodule update --init --recursive</span><br><span class="line"><span class="bullet">2.</span> 子模块获取 git submoduel foreach git fetch</span><br><span class="line"><span class="bullet">3.</span> 子模块合并 git submodule foreach git pull</span><br><span class="line"><span class="bullet">4.</span> 子模块更新 git submodule foreach git update</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="5、-删除子模块"><a href="#5、-删除子模块" class="headerlink" title="5、 删除子模块"></a>5、 删除子模块</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1.</span> 删除本地仓库 git rm --cached &#123;文件名&#125;</span><br><span class="line"><span class="code">	git rm --cached source</span></span><br><span class="line"><span class="code">2. 删除远程的仓库git -rf &#123;文件名&#125;</span></span><br><span class="line"><span class="code">	git -rf source</span></span><br><span class="line"><span class="code">3. 删除相关配置文件中和要删除的子模块相关的信息，分别是</span></span><br><span class="line"><span class="code">	.gitmodules</span></span><br><span class="line"><span class="code">	.git/config</span></span><br><span class="line"><span class="code">	.git</span></span><br></pre></td></tr></table></figure>
 
  
       <!-- reward -->
@@ -223,19 +235,19 @@
    
   <nav class="article-nav">
     
-      <a href="/2022/02/17/hello-world/" class="article-nav-link">
+      <a href="/2022/07/18/WebPack4.0/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            Hello World
+            (no title)
           
         </div>
       </a>
     
     
-      <a href="/2022/02/15/README/" class="article-nav-link">
+      <a href="/2022/02/15/Hexo%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">README</div>
+        <div class="article-nav-title">Hexo 基础操作</div>
       </a>
     
   </nav>
