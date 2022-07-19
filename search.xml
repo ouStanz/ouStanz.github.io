@@ -276,24 +276,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2022/07/18/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>README</title>
     <url>/2022/02/15/README/</url>
     <content><![CDATA[<h1 id="typora"><a href="#typora" class="headerlink" title="typora-"></a>typora-</h1><p>typora新建的笔记仓库</p>
@@ -302,60 +284,6 @@
 ]]></content>
       <tags>
         <tag>readme</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GitHub操作文档</title>
-    <url>/2022/02/15/github%E6%93%8D%E4%BD%9C%E6%96%87%E6%A1%A3/</url>
-    <content><![CDATA[<h2 id="一、基础操作"><a href="#一、基础操作" class="headerlink" title="一、基础操作"></a>一、基础操作</h2><h3 id="1、克隆远端文件"><a href="#1、克隆远端文件" class="headerlink" title="1、克隆远端文件"></a>1、克隆远端文件</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git clone</span><br></pre></td></tr></table></figure>
-
-<h3 id="2、把文件添加到本地版本库"><a href="#2、把文件添加到本地版本库" class="headerlink" title="2、把文件添加到本地版本库"></a>2、把文件添加到本地版本库</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git add</span><br></pre></td></tr></table></figure>
-
-<h3 id="3、提交修改"><a href="#3、提交修改" class="headerlink" title="3、提交修改"></a>3、提交修改</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">把对文件的修改提交并写明修改说明，提交到本地版本库</span><br><span class="line">gti commit -m “这里是修改说明”</span><br></pre></td></tr></table></figure>
-
-<h3 id="4、获取远端文件"><a href="#4、获取远端文件" class="headerlink" title="4、获取远端文件"></a>4、获取远端文件</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git fetch</span><br><span class="line">这一步只是把远程文件获取下来，但是并没有在工作目录中展示</span><br></pre></td></tr></table></figure>
-
-<h3 id="5、变基"><a href="#5、变基" class="headerlink" title="5、变基"></a>5、变基</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git rebase</span><br><span class="line">变基，这一步会把远程获取下来的文件放入到工作目录，并且会对比两个文件是否有内容冲突，并提示处理冲突</span><br></pre></td></tr></table></figure>
-
-<h3 id="6、提交"><a href="#6、提交" class="headerlink" title="6、提交"></a>6、提交</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">把本地代码推送到远程仓库</span><br><span class="line">git push origin </span><br><span class="line">如果是提交到分支仓库</span><br><span class="line">git push origin 分支名</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>到上面为止是一个基本的代码提交更新的过程，但是4、5 两步可以合并为下面这一步，但是和下面这一步又有所不同</p>
-<h3 id="7、拉取"><a href="#7、拉取" class="headerlink" title="7、拉取"></a>7、拉取</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git pull</span><br><span class="line">这一步执行后，获取后的远端文件就会在工作目录中展示了，但是默认是不变基的，在TortoiseGit中可以选为变基，如果选中后就是一模一样了</span><br></pre></td></tr></table></figure>
-
-<h3 id="8、-分支"><a href="#8、-分支" class="headerlink" title="8、 分支"></a>8、 分支</h3><h4 id="8-1-创建分支"><a href="#8-1-创建分支" class="headerlink" title="8.1 创建分支"></a>8.1 创建分支</h4><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git branch 分支名</span><br></pre></td></tr></table></figure>
-
-<h4 id="8-2-查看所有分支"><a href="#8-2-查看所有分支" class="headerlink" title="8.2 查看所有分支"></a>8.2 查看所有分支</h4><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git branch -a</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="8-3-切换分支"><a href="#8-3-切换分支" class="headerlink" title="8.3 切换分支"></a>8.3 切换分支</h4><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git checkout 分支名</span><br></pre></td></tr></table></figure>
-
-<h4 id="8-4-切换并创建分支"><a href="#8-4-切换并创建分支" class="headerlink" title="8.4 切换并创建分支"></a>8.4 切换并创建分支</h4><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git checkout -b 分支名</span><br></pre></td></tr></table></figure>
-
-<h2 id="二、用Tortoise-Git-常用操作"><a href="#二、用Tortoise-Git-常用操作" class="headerlink" title="二、用Tortoise Git 常用操作"></a>二、用Tortoise Git 常用操作</h2><h3 id="1、本地建库"><a href="#1、本地建库" class="headerlink" title="1、本地建库"></a>1、本地建库</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git create respository</span><br><span class="line">这里可以鼠标右键操作--在这里创建本地仓库</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="2、关联远程仓库"><a href="#2、关联远程仓库" class="headerlink" title="2、关联远程仓库"></a>2、关联远程仓库</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">这一步就只能在git bash 里实现了</span><br><span class="line">执行 git remote add origin https://github.com/xxxx/xxxx.git</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="3、合并分支"><a href="#3、合并分支" class="headerlink" title="3、合并分支"></a>3、合并分支</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">因为本地建仓一般是在master分支上，远程我的很多仓库是在origin分支上，所以需要合并分支</span><br><span class="line"><span class="bullet">1.</span> 查看本地所有分支 可以使用git bash的 git branch -a 查看</span><br><span class="line"><span class="bullet">2.</span> 鼠标右键切换远程origin分支 即remote/origin选项</span><br><span class="line"><span class="bullet">3.</span> 鼠标右键合并分支，被合并的是本地的master分支</span><br><span class="line"><span class="bullet">4.</span> 可以在远端把master分支给删除了</span><br></pre></td></tr></table></figure>
-
-<h2 id="三、建立子模块"><a href="#三、建立子模块" class="headerlink" title="三、建立子模块"></a>三、建立子模块</h2><h3 id="1、将子模块添加到主目录"><a href="#1、将子模块添加到主目录" class="headerlink" title="1、将子模块添加到主目录"></a>1、将子模块添加到主目录</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">1.</span> 先在git上建立一个仓库，这里建立的是typora-仓库</span><br><span class="line"><span class="bullet">2.</span> 打开gitbash，输入git submodule add &#123;子模块仓库url&#125;&#123;要将子模块内容放入到的文件夹名&#125;</span><br><span class="line"><span class="code">	如 git submodule add https://github.com/ouStanz/typora- source </span></span><br><span class="line"><span class="code">	`注意这里的source 是要将typora- 中的内容放入的文件夹，不用手动创建，要改名的原因是hexo需要用到source作为发布内容文件夹`</span></span><br><span class="line"><span class="code"></span></span><br></pre></td></tr></table></figure>
-
-<h3 id="2、查看子模块"><a href="#2、查看子模块" class="headerlink" title="2、查看子模块"></a>2、查看子模块</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git submodule </span><br></pre></td></tr></table></figure>
-
-<h3 id="3、启动子模块并更新"><a href="#3、启动子模块并更新" class="headerlink" title="3、启动子模块并更新"></a>3、启动子模块并更新</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">1.</span> 分步骤启用</span><br><span class="line"><span class="code">	git submodule init</span></span><br><span class="line"><span class="code">	git submodule update</span></span><br><span class="line"><span class="code">2. 可以使用 git submodule update --init --recursive 递归启用，这等同于1的分步骤</span></span><br><span class="line"><span class="code">3. 可以使用也可以递归克隆这个项目git clone &#123;子模块url&#125;&#123;子模块名&#125;</span></span><br><span class="line"><span class="code"></span></span><br></pre></td></tr></table></figure>
-
-<h3 id="4、多个子模块操作"><a href="#4、多个子模块操作" class="headerlink" title="4、多个子模块操作"></a>4、多个子模块操作</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">多个子模块可以使用git submodule foreach git &#123;命令&#125;</span><br><span class="line"><span class="bullet">1.</span> 先初始化子模块 git submodule update --init --recursive</span><br><span class="line"><span class="bullet">2.</span> 子模块获取 git submoduel foreach git fetch</span><br><span class="line"><span class="bullet">3.</span> 子模块合并 git submodule foreach git pull</span><br><span class="line"><span class="bullet">4.</span> 子模块更新 git submodule foreach git update</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="5、-删除子模块"><a href="#5、-删除子模块" class="headerlink" title="5、 删除子模块"></a>5、 删除子模块</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">1.</span> 删除本地仓库 git rm --cached &#123;文件名&#125;</span><br><span class="line"><span class="code">	git rm --cached source</span></span><br><span class="line"><span class="code">2. 删除远程的仓库git -rf &#123;文件名&#125;</span></span><br><span class="line"><span class="code">	git -rf source</span></span><br><span class="line"><span class="code">3. 删除相关配置文件中和要删除的子模块相关的信息，分别是</span></span><br><span class="line"><span class="code">	.gitmodules</span></span><br><span class="line"><span class="code">	.git/config</span></span><br><span class="line"><span class="code">	.git</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <tags>
-        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -549,6 +477,78 @@
 </tr>
 </tbody></table>
 <h2 id="四、loader样式打包"><a href="#四、loader样式打包" class="headerlink" title="四、loader样式打包"></a>四、loader样式打包</h2>]]></content>
+  </entry>
+  <entry>
+    <title>GitHub操作文档</title>
+    <url>/2022/02/15/github%E6%93%8D%E4%BD%9C%E6%96%87%E6%A1%A3/</url>
+    <content><![CDATA[<h2 id="一、基础操作"><a href="#一、基础操作" class="headerlink" title="一、基础操作"></a>一、基础操作</h2><h3 id="1、克隆远端文件"><a href="#1、克隆远端文件" class="headerlink" title="1、克隆远端文件"></a>1、克隆远端文件</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git clone</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、把文件添加到本地版本库"><a href="#2、把文件添加到本地版本库" class="headerlink" title="2、把文件添加到本地版本库"></a>2、把文件添加到本地版本库</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git add</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、提交修改"><a href="#3、提交修改" class="headerlink" title="3、提交修改"></a>3、提交修改</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">把对文件的修改提交并写明修改说明，提交到本地版本库</span><br><span class="line">gti commit -m “这里是修改说明”</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、获取远端文件"><a href="#4、获取远端文件" class="headerlink" title="4、获取远端文件"></a>4、获取远端文件</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git fetch</span><br><span class="line">这一步只是把远程文件获取下来，但是并没有在工作目录中展示</span><br></pre></td></tr></table></figure>
+
+<h3 id="5、变基"><a href="#5、变基" class="headerlink" title="5、变基"></a>5、变基</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git rebase</span><br><span class="line">变基，这一步会把远程获取下来的文件放入到工作目录，并且会对比两个文件是否有内容冲突，并提示处理冲突</span><br></pre></td></tr></table></figure>
+
+<h3 id="6、提交"><a href="#6、提交" class="headerlink" title="6、提交"></a>6、提交</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">把本地代码推送到远程仓库</span><br><span class="line">git push origin </span><br><span class="line">如果是提交到分支仓库</span><br><span class="line">git push origin 分支名</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>到上面为止是一个基本的代码提交更新的过程，但是4、5 两步可以合并为下面这一步，但是和下面这一步又有所不同</p>
+<h3 id="7、拉取"><a href="#7、拉取" class="headerlink" title="7、拉取"></a>7、拉取</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git pull</span><br><span class="line">这一步执行后，获取后的远端文件就会在工作目录中展示了，但是默认是不变基的，在TortoiseGit中可以选为变基，如果选中后就是一模一样了</span><br></pre></td></tr></table></figure>
+
+<h3 id="8、-分支"><a href="#8、-分支" class="headerlink" title="8、 分支"></a>8、 分支</h3><h4 id="8-1-创建分支"><a href="#8-1-创建分支" class="headerlink" title="8.1 创建分支"></a>8.1 创建分支</h4><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git branch 分支名</span><br></pre></td></tr></table></figure>
+
+<h4 id="8-2-查看所有分支"><a href="#8-2-查看所有分支" class="headerlink" title="8.2 查看所有分支"></a>8.2 查看所有分支</h4><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git branch -a</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="8-3-切换分支"><a href="#8-3-切换分支" class="headerlink" title="8.3 切换分支"></a>8.3 切换分支</h4><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git checkout 分支名</span><br></pre></td></tr></table></figure>
+
+<h4 id="8-4-切换并创建分支"><a href="#8-4-切换并创建分支" class="headerlink" title="8.4 切换并创建分支"></a>8.4 切换并创建分支</h4><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git checkout -b 分支名</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、用Tortoise-Git-常用操作"><a href="#二、用Tortoise-Git-常用操作" class="headerlink" title="二、用Tortoise Git 常用操作"></a>二、用Tortoise Git 常用操作</h2><h3 id="1、本地建库"><a href="#1、本地建库" class="headerlink" title="1、本地建库"></a>1、本地建库</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git create respository</span><br><span class="line">这里可以鼠标右键操作--在这里创建本地仓库</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2、关联远程仓库"><a href="#2、关联远程仓库" class="headerlink" title="2、关联远程仓库"></a>2、关联远程仓库</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">这一步就只能在git bash 里实现了</span><br><span class="line">执行 git remote add origin https://github.com/xxxx/xxxx.git</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="3、合并分支"><a href="#3、合并分支" class="headerlink" title="3、合并分支"></a>3、合并分支</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">因为本地建仓一般是在master分支上，远程我的很多仓库是在origin分支上，所以需要合并分支</span><br><span class="line"><span class="bullet">1.</span> 查看本地所有分支 可以使用git bash的 git branch -a 查看</span><br><span class="line"><span class="bullet">2.</span> 鼠标右键切换远程origin分支 即remote/origin选项</span><br><span class="line"><span class="bullet">3.</span> 鼠标右键合并分支，被合并的是本地的master分支</span><br><span class="line"><span class="bullet">4.</span> 可以在远端把master分支给删除了</span><br></pre></td></tr></table></figure>
+
+<h2 id="三、建立子模块"><a href="#三、建立子模块" class="headerlink" title="三、建立子模块"></a>三、建立子模块</h2><h3 id="1、将子模块添加到主目录"><a href="#1、将子模块添加到主目录" class="headerlink" title="1、将子模块添加到主目录"></a>1、将子模块添加到主目录</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">1.</span> 先在git上建立一个仓库，这里建立的是typora-仓库</span><br><span class="line"><span class="bullet">2.</span> 打开gitbash，输入git submodule add &#123;子模块仓库url&#125;&#123;要将子模块内容放入到的文件夹名&#125;</span><br><span class="line"><span class="code">	如 git submodule add https://github.com/ouStanz/typora- source </span></span><br><span class="line"><span class="code">	`注意这里的source 是要将typora- 中的内容放入的文件夹，不用手动创建，要改名的原因是hexo需要用到source作为发布内容文件夹`</span></span><br><span class="line"><span class="code"></span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2、查看子模块"><a href="#2、查看子模块" class="headerlink" title="2、查看子模块"></a>2、查看子模块</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git submodule </span><br></pre></td></tr></table></figure>
+
+<h3 id="3、启动子模块并更新"><a href="#3、启动子模块并更新" class="headerlink" title="3、启动子模块并更新"></a>3、启动子模块并更新</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">1.</span> 分步骤启用</span><br><span class="line"><span class="code">	git submodule init</span></span><br><span class="line"><span class="code">	git submodule update</span></span><br><span class="line"><span class="code">2. 可以使用 git submodule update --init --recursive 递归启用，这等同于1的分步骤</span></span><br><span class="line"><span class="code">3. 可以使用也可以递归克隆这个项目git clone &#123;子模块url&#125;&#123;子模块名&#125;</span></span><br><span class="line"><span class="code"></span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4、多个子模块操作"><a href="#4、多个子模块操作" class="headerlink" title="4、多个子模块操作"></a>4、多个子模块操作</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">多个子模块可以使用git submodule foreach git &#123;命令&#125;</span><br><span class="line"><span class="bullet">1.</span> 先初始化子模块 git submodule update --init --recursive</span><br><span class="line"><span class="bullet">2.</span> 子模块获取 git submoduel foreach git fetch</span><br><span class="line"><span class="bullet">3.</span> 子模块合并 git submodule foreach git pull</span><br><span class="line"><span class="bullet">4.</span> 子模块更新 git submodule foreach git update</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="5、-删除子模块"><a href="#5、-删除子模块" class="headerlink" title="5、 删除子模块"></a>5、 删除子模块</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">1.</span> 删除本地仓库 git rm --cached &#123;文件名&#125;</span><br><span class="line"><span class="code">	git rm --cached source</span></span><br><span class="line"><span class="code">2. 删除远程的仓库git -rf &#123;文件名&#125;</span></span><br><span class="line"><span class="code">	git -rf source</span></span><br><span class="line"><span class="code">3. 删除相关配置文件中和要删除的子模块相关的信息，分别是</span></span><br><span class="line"><span class="code">	.gitmodules</span></span><br><span class="line"><span class="code">	.git/config</span></span><br><span class="line"><span class="code">	.git</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2022/07/18/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>jwt基础操作</title>
