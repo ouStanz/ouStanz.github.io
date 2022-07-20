@@ -6,7 +6,7 @@
   <link href="https://oustanz.github.io/atom.xml" rel="self"/>
   
   <link href="https://oustanz.github.io/"/>
-  <updated>2022-07-20T03:55:43.520Z</updated>
+  <updated>2022-07-20T03:59:29.941Z</updated>
   <id>https://oustanz.github.io/</id>
   
   <author>
@@ -21,16 +21,15 @@
     <link href="https://oustanz.github.io/2022/07/20/test/"/>
     <id>https://oustanz.github.io/2022/07/20/test/</id>
     <published>2022-07-20T03:26:02.000Z</published>
-    <updated>2022-07-20T03:55:43.520Z</updated>
+    <updated>2022-07-20T03:59:29.941Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;#quick start&lt;br&gt;&lt;img src=&quot;/test/img.png&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
-&lt;img src=&quot;/2022/07/20/test/img.png&quot; class title=&quot;img&quot;&gt;
-&lt;p&gt;##content&lt;br&gt;there is</summary>
+    <summary type="html">&lt;p&gt;#quick start&lt;br&gt;&lt;img src=&quot;/asset_img/img.png&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
+&lt;img src=&quot;/2022/07/20/test/img.png&quot; class</summary>
         
       
     

@@ -584,7 +584,7 @@
   <entry>
     <title>hexo</title>
     <url>/2022/07/20/test/</url>
-    <content><![CDATA[<p>#quick start<br><img src="/test/img.png" alt="img"></p>
+    <content><![CDATA[<p>#quick start<br><img src="/asset_img/img.png" alt="img"></p>
 <img src="/2022/07/20/test/img.png" class title="img">
 <p>##content<br>there is sth<br>#end</p>
 ]]></content>
