@@ -23,6 +23,9 @@
 
 <p>上面的title 、date、tags 在post.md中进行，渲染<br>不写的话会出现没有标题名的问题</p>
 <p><img src="/Hexo%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C%5Cimage-20220215112309564.png" alt="image-20220215112309564"></p>
+<img src="/2022/02/15/Hexo%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/image-20220215112309564.png" class title="image-20220215112309564">
+
+
 <p>用markdown语言（我用的是typora编辑器）书写博客内容，然后用hexo s 发布出来就可以本地浏览了</p>
 <h3 id="Git托管服务发布博客"><a href="#Git托管服务发布博客" class="headerlink" title="Git托管服务发布博客"></a>Git托管服务发布博客</h3><p>GitHub配置</p>
 <ol>
@@ -173,12 +176,17 @@
 </tr>
 </tbody></table>
 <h3 id="layout"><a href="#layout" class="headerlink" title="layout"></a>layout</h3><p>到目前为止，我们可以看看博客地址的目录结构了，scaffolds是存放模板的文件夹，默认提供了三个模板，咱这里可以根据自己的需求新建模板</p>
-<p><img src="/Hexo%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C%5Cimage-20220215141824666.png" alt="image-20220215141824666"></p>
+<img src="/2022/02/15/Hexo%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/image-20220215141824666.png" class title="image-20220215141824666">
+
+
 <h4 id="post"><a href="#post" class="headerlink" title="post"></a>post</h4><p>新建的博客文章内容给都是在<code>_posts</code>文件夹下，而<code>_posts</code>文件夹下所有内容的构建布局模板其实是在<code>scaffolds</code>文件夹下的post.md中，也就是通过命令<code>hexo n 新内容</code>新建的博客最开头都有设置好的title、date、tags这三部分模板内容，如post.md中的模板改成这样</p>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line"><span class="section">tags:&#123;&#123;tags&#125;&#125;</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"><span class="section">#quick start</span></span><br><span class="line"></span><br><span class="line"><span class="section">##content</span></span><br><span class="line">there is sth</span><br><span class="line"><span class="section">#end</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>执行<code>hexo n newpage1</code>后得到的结果就是这样的</p>
 <p><img src="/Hexo%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C%5Cimage-20220215142552526.png" alt="image-20220215142552526"></p>
+<img src="/2022/02/15/Hexo%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/image-20220215142552526.png" class title="image-20220215142552526">
+
+
 <p>其实还有很多其他的方式。hexo提供了三种布局方式</p>
 <table>
 <thead>
@@ -557,6 +565,13 @@
       </tags>
   </entry>
   <entry>
+    <title>jwt基础操作</title>
+    <url>/2022/02/15/jwt/</url>
+    <content><![CDATA[<h2 id="jwt"><a href="#jwt" class="headerlink" title="jwt"></a>jwt</h2><p>jwt json–web–token</p>
+<p>我做过了更改了</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2022/07/18/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -575,16 +590,9 @@
 ]]></content>
   </entry>
   <entry>
-    <title>jwt基础操作</title>
-    <url>/2022/02/15/jwt/</url>
-    <content><![CDATA[<h2 id="jwt"><a href="#jwt" class="headerlink" title="jwt"></a>jwt</h2><p>jwt json–web–token</p>
-<p>我做过了更改了</p>
-]]></content>
-  </entry>
-  <entry>
     <title>hexo</title>
     <url>/2022/07/20/test/</url>
-    <content><![CDATA[<p>#quick start<br><img src="/asset_img/img.png" alt="img"></p>
+    <content><![CDATA[<p>#quick start</p>
 <img src="/2022/07/20/test/img.png" class title="img">
 <p>##content<br>there is sth<br>#end</p>
 ]]></content>
@@ -633,7 +641,11 @@
 <p>如果需要将两个或多个路径都指向一个组件内容，可以用重定向redirect </p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">routes: [</span><br><span class="line">&#123;</span><br><span class="line">  path: &#x27;/&#x27;,redirect:&#x27;/home&#x27;//像这样,路径&#x27;/&#x27;和&#x27;/home&#x27;都会指向/home,显示HellowzWorld</span><br><span class="line">&#125;,</span><br><span class="line">&#123;</span><br><span class="line">  path:&#x27;/home&#x27;,</span><br><span class="line">  name: &#x27;HelloWorld&#x27;,</span><br><span class="line">  component: HelloWorld</span><br><span class="line">&#125;,</span><br><span class="line">]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p><img src="/2022/02/15/vue-cli/Users/ouSt\AppData\Roaming\Typora\typora-user-images\image-20220128102033954.png" alt="image-20220128102033954"></p>
+
+
+
+
+
 <h5 id="4-2-1-引用其他组件–通过路由方式"><a href="#4-2-1-引用其他组件–通过路由方式" class="headerlink" title="4.2.1 引用其他组件–通过路由方式"></a>4.2.1 引用其他组件–通过路由方式</h5><p>在App.vue的template中加入<router-view> 表示要引用这个路由下的内容，这个只能在根路径下使用，因为其他路径下已经规定好了router</router-view></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div id=&quot;app&quot;&gt;</span><br><span class="line">    &lt;img src=&quot;./assets/logo.png&quot;&gt;</span><br><span class="line">    &lt;router-view/&gt; </span><br><span class="line"></span><br><span class="line">    &lt;Footer&gt;&lt;/Footer&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
 
