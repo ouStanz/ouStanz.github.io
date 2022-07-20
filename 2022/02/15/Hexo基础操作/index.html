@@ -91,7 +91,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">9 分钟</span>
+            <span class="post-count">10 分钟</span>
         </span>
     </span>
 </div>
@@ -318,6 +318,8 @@
 <p>而当使用<code>hexo n newpage</code>时，其实完整命令是<code>hexo new [layout]&lt;title&gt;</code>，只不过layout默认为post而已</p>
 <h4 id="page"><a href="#page" class="headerlink" title="page"></a>page</h4><p>如果想另起一页用page的模板，可以使用命令<code>hexo n page board</code>，这样就建立了以page为模板的board文件夹，对应的内容就可以在board文件夹下写，如果想访问就可以用链接<code>http://127.0.0.1:7099/board</code>去访问，外网链接格式一致</p>
 <h4 id="draft"><a href="#draft" class="headerlink" title="draft"></a>draft</h4><p>是草稿文件模板，即以该模板写的文章不会被别人看到，内容会放在<code>source\_draft</code>文件夹下，如果想要预览则可以通过<code>hexo server --draft</code>预览，最后想post的话可以使用 <code>hexo publish draft newpage</code>把想要post的部分内容pulish出去</p>
+<h3 id="网页图片不现实问题"><a href="#网页图片不现实问题" class="headerlink" title="网页图片不现实问题"></a>网页图片不现实问题</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1.</span> post<span class="emphasis">_asset_</span>folder: true 这一步之后再source/post 下新建md的时候会生成一个同名的文件夹</span><br><span class="line"><span class="bullet">2.</span> 执行 npm install https://github.com/CodeFalling/hexo-asset-image --save</span><br><span class="line"><span class="bullet">3.</span> &#123;% asset<span class="emphasis">_img img.png 图片说明 %&#125;</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="主题的"><a href="#主题的" class="headerlink" title="主题的"></a>主题的</h2><p>可以更换主题啦啦啦~~，原主题实在是太丑了，<a target="_blank" rel="noopener" href="https://hexo.io/themes/">这是更换主题地址</a>，看好哪个下载下来（简约风格又NexT、hueman）等，从github下载后在<code>_config.yml</code>的theme部分换成<code>主题文件夹</code>的名字就行了</p>
 <p>然后进入主题文件夹下，找到<code>—config.xml.example</code>，复制一份，重命名为<code>_config.xml</code>就好了</p>
 <p>我这用的是Ayer，看着不错</p>
