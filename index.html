@@ -439,6 +439,58 @@
 
     
     <article
+  id="post-Nginx操作配置"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/02/16/Nginx%E6%93%8D%E4%BD%9C%E9%85%8D%E7%BD%AE/"
+    >Nginx操作配置</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/02/16/Nginx%E6%93%8D%E4%BD%9C%E9%85%8D%E7%BD%AE/" class="article-date">
+  <time datetime="2022-02-16T07:36:15.000Z" itemprop="datePublished">2022-02-16</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="Nginx-简述"><a href="#Nginx-简述" class="headerlink" title="Nginx 简述"></a>Nginx 简述</h2><p>Nginx是一个很热门的反向代理服务器，它功能上可以实现各种代理，比如三级域名跳转，端口跳转等等，也正是因为其功能的强大也往往会让人觉得很难学~但事实上是，学通可能需要一定时间经验积累，但是入门实现一些需求真的很容易！</p>
+<p>首先，安装就是很友好的，下载下来的是一个免安装包，它不想SQL那样需要各种安装步骤，需要各种环境配置，所以的功能都在其<code>conf/nginx.conf</code>下配置实现，及其容易，现在先说安装.</p>
+<h2 id="Nginx-安装"><a href="#Nginx-安装" class="headerlink" title="Nginx 安装"></a>Nginx 安装</h2><p>这里是下载<a target="_blank" rel="noopener" href="https://nginx.org/en/download.html">链接</a>，下载界面如下，我下载的是稳定版本的呃。</p>
+<p><img src="C:\Users\ouSt\AppData\Roaming\Typora\typora-user-images\image-20220216154414596.png" alt="image-20220216154414596"></p>
+<p>##content<br>there is sth<br>#end</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-github操作文档"
   class="article article-type-post"
   itemscope
@@ -512,6 +564,10 @@
 
 <h3 id="5、-删除子模块"><a href="#5、-删除子模块" class="headerlink" title="5、 删除子模块"></a>5、 删除子模块</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1.</span> 删除本地仓库 git rm --cached &#123;文件名&#125;</span><br><span class="line"><span class="code">	git rm --cached source</span></span><br><span class="line"><span class="code">2. 删除远程的仓库git -rf &#123;文件名&#125;</span></span><br><span class="line"><span class="code">	git -rf source</span></span><br><span class="line"><span class="code">3. 删除相关配置文件中和要删除的子模块相关的信息，分别是</span></span><br><span class="line"><span class="code">	.gitmodules</span></span><br><span class="line"><span class="code">	.git/config</span></span><br><span class="line"><span class="code">	.git</span></span><br></pre></td></tr></table></figure>
 
+<h2 id="四、出错处理"><a href="#四、出错处理" class="headerlink" title="四、出错处理"></a>四、出错处理</h2><h3 id="Failed-to-connect-to-github-com-port-443-Operation-timed-out"><a href="#Failed-to-connect-to-github-com-port-443-Operation-timed-out" class="headerlink" title="Failed to connect to github.com port 443: Operation timed out"></a>Failed to connect to github.com port 443: Operation timed out</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git config --global --unset http.proxy</span><br><span class="line"></span><br><span class="line">git config --global --unset https.proxy</span><br><span class="line"></span><br><span class="line">git config --global http.sslVerify &quot;false&quot;</span><br></pre></td></tr></table></figure>
+
+
+
  
       <!-- reward -->
       
@@ -580,7 +636,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 第一篇博客</span><br><span class="line">date: 2022-02-15 11:21:17</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 
 <p>上面的title 、date、tags 在post.md中进行，渲染<br>不写的话会出现没有标题名的问题</p>
-<p><img src="C:\Users\ouSt\AppData\Roaming\Typora\typora-user-images\image-20220215112309564.png" alt="image-20220215112309564"></p>
+<p><img src="/Hexo%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C%5Cimage-20220215112309564.png" alt="image-20220215112309564"></p>
 <p>用markdown语言（我用的是typora编辑器）书写博客内容，然后用hexo s 发布出来就可以本地浏览了</p>
 <h3 id="Git托管服务发布博客"><a href="#Git托管服务发布博客" class="headerlink" title="Git托管服务发布博客"></a>Git托管服务发布博客</h3><p>GitHub配置</p>
 <ol>
@@ -599,9 +655,13 @@
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 
 <p>这样之后就可以在浏览器输入<youname>.github.io产看博客了</p>
-<h3 id="绑定个人域名"><a href="#绑定个人域名" class="headerlink" title="绑定个人域名"></a>绑定个人域名</h3><p>现在的域名是git提供的，可以自己申请一个绑定，比如绑定在egs365.top</p>
+<h3 id="绑定个人域名"><a href="#绑定个人域名" class="headerlink" title="绑定个人域名"></a>绑定个人域名</h3><p>现在的域名是git提供的，可以自己申请一个绑定，比如绑定在xxxx.cn</p>
 <h4 id="阿里云域名"><a href="#阿里云域名" class="headerlink" title="阿里云域名"></a>阿里云域名</h4><p>我的是阿里云买的域名，所以在阿里云控制台，进行解析，把github的服务器地址添加进去，是192.30.252.153 和 192.30.252.154 ，解析路线选默认，主机记录时@，记录类型是A类即可</p>
-<h4 id="git域名操作"><a href="#git域名操作" class="headerlink" title="git域名操作"></a>git域名操作</h4><p>登录github建的那个博客仓库，点击settings，设置custom domain，输入域名，如egs365.top</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1.</span> 首先要有一个自己的域名，比如我的是xxxx.cn</span><br><span class="line"><span class="bullet">2.</span> 但是我这个域名是主域名，不想作为博客的域名使用，而是要将其作为其他的网站域名，但是又不想重新买个域名，所以就想办法建立一个二级域名，把git域名绑定到这个二级域名上</span><br><span class="line"><span class="bullet">3.</span> 步骤来了，在阿里云的域名dns解析那里添加一个新的记录，就设置为blog.xxx.cn,记录类型是CNAME，记录值是我的git域名，</span><br><span class="line"><span class="bullet">4.</span> 在git上的settings中，左边找到pages，右边下滑找到cutom domain，把刚刚添加的二级域名地址填进去，save就可以了</span><br><span class="line"><span class="code">`注意· 这里我本来想在云主机用nginx设置一个域名跳转，但是域名绑定只能绑定80端口，所以没有实现用次级域名直接完成nginx代理跳转，最后找到阿里云方式跳转`</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="git域名操作"><a href="#git域名操作" class="headerlink" title="git域名操作"></a>git域名操作</h4><p>登录github建的那个博客仓库，点击settings，设置custom domain，输入域名，如xxx.top</p>
 <p>然后再再博客文件夹myBlog下的source文件夹下创建CNAME文件（不写后缀），里面写入域名<code>egs365.top</code>,最后在发布一遍就可以了</p>
 <h1 id="详细配置"><a href="#详细配置" class="headerlink" title="详细配置"></a>详细配置</h1><h2 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h2><p>在_config.yml下可以实现网站的个性化配置很有意思</p>
 <h3 id="Site"><a href="#Site" class="headerlink" title="Site"></a>Site</h3><table>
@@ -727,12 +787,12 @@
 </tr>
 </tbody></table>
 <h3 id="layout"><a href="#layout" class="headerlink" title="layout"></a>layout</h3><p>到目前为止，我们可以看看博客地址的目录结构了，scaffolds是存放模板的文件夹，默认提供了三个模板，咱这里可以根据自己的需求新建模板</p>
-<p><img src="C:\Users\ouSt\AppData\Roaming\Typora\typora-user-images\image-20220215141824666.png" alt="image-20220215141824666"></p>
+<p><img src="/Hexo%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C%5Cimage-20220215141824666.png" alt="image-20220215141824666"></p>
 <h4 id="post"><a href="#post" class="headerlink" title="post"></a>post</h4><p>新建的博客文章内容给都是在<code>_posts</code>文件夹下，而<code>_posts</code>文件夹下所有内容的构建布局模板其实是在<code>scaffolds</code>文件夹下的post.md中，也就是通过命令<code>hexo n 新内容</code>新建的博客最开头都有设置好的title、date、tags这三部分模板内容，如post.md中的模板改成这样</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line"><span class="section">tags:&#123;&#123;tags&#125;&#125;</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"><span class="section">#quick start</span></span><br><span class="line"></span><br><span class="line"><span class="section">##content</span></span><br><span class="line">there is sth</span><br><span class="line"><span class="section">#end</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>执行<code>hexo n newpage1</code>后得到的结果就是这样的</p>
-<p><img src="C:\Users\ouSt\AppData\Roaming\Typora\typora-user-images\image-20220215142552526.png" alt="image-20220215142552526"></p>
+<p><img src="/Hexo%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C%5Cimage-20220215142552526.png" alt="image-20220215142552526"></p>
 <p>其实还有很多其他的方式。hexo提供了三种布局方式</p>
 <table>
 <thead>
@@ -765,6 +825,12 @@
 <p>然后进入主题文件夹下，找到<code>—config.xml.example</code>，复制一份，重命名为<code>_config.xml</code>就好了</p>
 <p>我这用的是Ayer，看着不错</p>
 <h3 id="customize"><a href="#customize" class="headerlink" title="customize"></a>customize</h3><p>在主题文件夹下的<code>source/css/images</code>中放入需要的图片，然后配置主题的_config.yml文件中先对应的路径就可以了</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1.</span> 这里有一个问题在theme文件夹下有个ayer主题文件，因为是直接clone的别人的主题，所以这个文件夹clone下来后要把.git删了</span><br><span class="line"><span class="bullet">2.</span> 如果要把ayer下的文件放到私有云，必须把ayer/source里面的内容同步提交，我就是没有删除.git，然后source文件没提交，在其他电脑clone下来后发布出来的博客没有主题</span><br></pre></td></tr></table></figure>
+
+
+
+
+
 <h3 id="插件-必需"><a href="#插件-必需" class="headerlink" title="插件(必需)"></a>插件(必需)</h3><ul>
 <li><p><a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-generator-searchdb">hexo-generator-searchdb</a> 用于搜索</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">COPYnpm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>

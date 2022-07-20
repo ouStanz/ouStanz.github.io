@@ -82,7 +82,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">874</span>
+            <span class="post-count">907</span>
         </span>
     </span>
 
@@ -151,6 +151,10 @@
 
 
 <h3 id="5、-删除子模块"><a href="#5、-删除子模块" class="headerlink" title="5、 删除子模块"></a>5、 删除子模块</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1.</span> 删除本地仓库 git rm --cached &#123;文件名&#125;</span><br><span class="line"><span class="code">	git rm --cached source</span></span><br><span class="line"><span class="code">2. 删除远程的仓库git -rf &#123;文件名&#125;</span></span><br><span class="line"><span class="code">	git -rf source</span></span><br><span class="line"><span class="code">3. 删除相关配置文件中和要删除的子模块相关的信息，分别是</span></span><br><span class="line"><span class="code">	.gitmodules</span></span><br><span class="line"><span class="code">	.git/config</span></span><br><span class="line"><span class="code">	.git</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="四、出错处理"><a href="#四、出错处理" class="headerlink" title="四、出错处理"></a>四、出错处理</h2><h3 id="Failed-to-connect-to-github-com-port-443-Operation-timed-out"><a href="#Failed-to-connect-to-github-com-port-443-Operation-timed-out" class="headerlink" title="Failed to connect to github.com port 443: Operation timed out"></a>Failed to connect to github.com port 443: Operation timed out</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git config --global --unset http.proxy</span><br><span class="line"></span><br><span class="line">git config --global --unset https.proxy</span><br><span class="line"></span><br><span class="line">git config --global http.sslVerify &quot;false&quot;</span><br></pre></td></tr></table></figure>
+
+
 
  
       <!-- reward -->
@@ -235,11 +239,11 @@
    
   <nav class="article-nav">
     
-      <a href="/2022/07/18/WebPack4.0/" class="article-nav-link">
+      <a href="/2022/02/16/Nginx%E6%93%8D%E4%BD%9C%E9%85%8D%E7%BD%AE/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            (no title)
+            Nginx操作配置
           
         </div>
       </a>
