@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>README</title>
+    <url>/2022/02/15/README/</url>
+    <content><![CDATA[<h1 id="typora"><a href="#typora" class="headerlink" title="typora-"></a>typora-</h1><p>typora新建的笔记仓库</p>
+<p>本仓库在远端的typora-中存储，编辑有typora编辑器进行</p>
+<p>博客发布由hexo联合git发布静态博客服务，发布的博客服务有git托管</p>
+]]></content>
+      <tags>
+        <tag>readme</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo 基础操作</title>
     <url>/2022/02/15/Hexo%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</url>
     <content><![CDATA[<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h3><ol>
@@ -22,7 +33,7 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 第一篇博客</span><br><span class="line">date: 2022-02-15 11:21:17</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 
 <p>上面的title 、date、tags 在post.md中进行，渲染<br>不写的话会出现没有标题名的问题</p>
-<p><img src="/2022/02/15/Hexo%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/Hexo%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C%5Cimage-20220215112309564.png" alt="image-20220215112309564"></p>
+<p><img src="/Hexo%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C%5Cimage-20220215112309564.png" alt="image-20220215112309564"></p>
 <p>用markdown语言（我用的是typora编辑器）书写博客内容，然后用hexo s 发布出来就可以本地浏览了</p>
 <h3 id="Git托管服务发布博客"><a href="#Git托管服务发布博客" class="headerlink" title="Git托管服务发布博客"></a>Git托管服务发布博客</h3><p>GitHub配置</p>
 <ol>
@@ -173,12 +184,12 @@
 </tr>
 </tbody></table>
 <h3 id="layout"><a href="#layout" class="headerlink" title="layout"></a>layout</h3><p>到目前为止，我们可以看看博客地址的目录结构了，scaffolds是存放模板的文件夹，默认提供了三个模板，咱这里可以根据自己的需求新建模板</p>
-<p><img src="/2022/02/15/Hexo%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/Hexo%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C%5Cimage-20220215141824666.png" alt="image-20220215141824666"></p>
+<p><img src="/Hexo%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C%5Cimage-20220215141824666.png" alt="image-20220215141824666"></p>
 <h4 id="post"><a href="#post" class="headerlink" title="post"></a>post</h4><p>新建的博客文章内容给都是在<code>_posts</code>文件夹下，而<code>_posts</code>文件夹下所有内容的构建布局模板其实是在<code>scaffolds</code>文件夹下的post.md中，也就是通过命令<code>hexo n 新内容</code>新建的博客最开头都有设置好的title、date、tags这三部分模板内容，如post.md中的模板改成这样</p>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line"><span class="section">tags:&#123;&#123;tags&#125;&#125;</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"><span class="section">#quick start</span></span><br><span class="line"></span><br><span class="line"><span class="section">##content</span></span><br><span class="line">there is sth</span><br><span class="line"><span class="section">#end</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>执行<code>hexo n newpage1</code>后得到的结果就是这样的</p>
-<p><img src="/2022/02/15/Hexo%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/Hexo%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C%5Cimage-20220215142552526.png" alt="image-20220215142552526"></p>
+<p><img src="/Hexo%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C%5Cimage-20220215142552526.png" alt="image-20220215142552526"></p>
 <p>其实还有很多其他的方式。hexo提供了三种布局方式</p>
 <table>
 <thead>
@@ -286,23 +297,12 @@
       </tags>
   </entry>
   <entry>
-    <title>README</title>
-    <url>/2022/02/15/README/</url>
-    <content><![CDATA[<h1 id="typora"><a href="#typora" class="headerlink" title="typora-"></a>typora-</h1><p>typora新建的笔记仓库</p>
-<p>本仓库在远端的typora-中存储，编辑有typora编辑器进行</p>
-<p>博客发布由hexo联合git发布静态博客服务，发布的博客服务有git托管</p>
-]]></content>
-      <tags>
-        <tag>readme</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Nginx操作配置</title>
     <url>/2022/02/16/Nginx%E6%93%8D%E4%BD%9C%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<h2 id="Nginx-简述"><a href="#Nginx-简述" class="headerlink" title="Nginx 简述"></a>Nginx 简述</h2><p>Nginx是一个很热门的反向代理服务器，它功能上可以实现各种代理，比如三级域名跳转，端口跳转等等，也正是因为其功能的强大也往往会让人觉得很难学~但事实上是，学通可能需要一定时间经验积累，但是入门实现一些需求真的很容易！</p>
 <p>首先，安装就是很友好的，下载下来的是一个免安装包，它不想SQL那样需要各种安装步骤，需要各种环境配置，所以的功能都在其<code>conf/nginx.conf</code>下配置实现，及其容易，现在先说安装.</p>
 <h2 id="Nginx-安装"><a href="#Nginx-安装" class="headerlink" title="Nginx 安装"></a>Nginx 安装</h2><p>这里是下载<a href="https://nginx.org/en/download.html">链接</a>，下载界面如下，我下载的是稳定版本的呃。</p>
-<p><img src="/2022/02/16/Nginx%E6%93%8D%E4%BD%9C%E9%85%8D%E7%BD%AE/Users/ouSt\AppData\Roaming\Typora\typora-user-images\image-20220216154414596.png" alt="image-20220216154414596"></p>
+<p><img src="/C:/Users\ouSt\AppData\Roaming\Typora\typora-user-images\image-20220216154414596.png" alt="image-20220216154414596"></p>
 <p>##content<br>there is sth<br>#end</p>
 ]]></content>
   </entry>
@@ -517,6 +517,13 @@
 ]]></content>
   </entry>
   <entry>
+    <title>jwt基础操作</title>
+    <url>/2022/02/15/jwt/</url>
+    <content><![CDATA[<h2 id="jwt"><a href="#jwt" class="headerlink" title="jwt"></a>jwt</h2><p>jwt json–web–token</p>
+<p>我做过了更改了</p>
+]]></content>
+  </entry>
+  <entry>
     <title>GitHub操作文档</title>
     <url>/2022/02/15/github%E6%93%8D%E4%BD%9C%E6%96%87%E6%A1%A3/</url>
     <content><![CDATA[<h2 id="一、基础操作"><a href="#一、基础操作" class="headerlink" title="一、基础操作"></a>一、基础操作</h2><h3 id="1、克隆远端文件"><a href="#1、克隆远端文件" class="headerlink" title="1、克隆远端文件"></a>1、克隆远端文件</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git clone</span><br></pre></td></tr></table></figure>
@@ -575,11 +582,15 @@
       </tags>
   </entry>
   <entry>
-    <title>jwt基础操作</title>
-    <url>/2022/02/15/jwt/</url>
-    <content><![CDATA[<h2 id="jwt"><a href="#jwt" class="headerlink" title="jwt"></a>jwt</h2><p>jwt json–web–token</p>
-<p>我做过了更改了</p>
+    <title>hexo</title>
+    <url>/2022/07/20/test/</url>
+    <content><![CDATA[<p>#quick start</p>
+<img class=".png [img]">
+<p>##content<br>there is sth<br>#end</p>
 ]]></content>
+      <tags>
+        <tag>123</tag>
+      </tags>
   </entry>
   <entry>
     <title>VUE-CLI</title>
@@ -622,7 +633,7 @@
 <p>如果需要将两个或多个路径都指向一个组件内容，可以用重定向redirect </p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">routes: [</span><br><span class="line">&#123;</span><br><span class="line">  path: &#x27;/&#x27;,redirect:&#x27;/home&#x27;//像这样,路径&#x27;/&#x27;和&#x27;/home&#x27;都会指向/home,显示HellowzWorld</span><br><span class="line">&#125;,</span><br><span class="line">&#123;</span><br><span class="line">  path:&#x27;/home&#x27;,</span><br><span class="line">  name: &#x27;HelloWorld&#x27;,</span><br><span class="line">  component: HelloWorld</span><br><span class="line">&#125;,</span><br><span class="line">]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p><img src="/2022/02/15/vue-cli/Users/ouSt\AppData\Roaming\Typora\typora-user-images\image-20220128102033954.png" alt="image-20220128102033954"></p>
+<p><img src="/C:/Users\ouSt\AppData\Roaming\Typora\typora-user-images\image-20220128102033954.png" alt="image-20220128102033954"></p>
 <h5 id="4-2-1-引用其他组件–通过路由方式"><a href="#4-2-1-引用其他组件–通过路由方式" class="headerlink" title="4.2.1 引用其他组件–通过路由方式"></a>4.2.1 引用其他组件–通过路由方式</h5><p>在App.vue的template中加入<router-view> 表示要引用这个路由下的内容，这个只能在根路径下使用，因为其他路径下已经规定好了router</router-view></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div id=&quot;app&quot;&gt;</span><br><span class="line">    &lt;img src=&quot;./assets/logo.png&quot;&gt;</span><br><span class="line">    &lt;router-view/&gt; </span><br><span class="line"></span><br><span class="line">    &lt;Footer&gt;&lt;/Footer&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
 
