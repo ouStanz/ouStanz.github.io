@@ -302,7 +302,7 @@
     <content><![CDATA[<h2 id="Nginx-简述"><a href="#Nginx-简述" class="headerlink" title="Nginx 简述"></a>Nginx 简述</h2><p>Nginx是一个很热门的反向代理服务器，它功能上可以实现各种代理，比如三级域名跳转，端口跳转等等，也正是因为其功能的强大也往往会让人觉得很难学~但事实上是，学通可能需要一定时间经验积累，但是入门实现一些需求真的很容易！</p>
 <p>首先，安装就是很友好的，下载下来的是一个免安装包，它不想SQL那样需要各种安装步骤，需要各种环境配置，所以的功能都在其<code>conf/nginx.conf</code>下配置实现，及其容易，现在先说安装.</p>
 <h2 id="Nginx-安装"><a href="#Nginx-安装" class="headerlink" title="Nginx 安装"></a>Nginx 安装</h2><p>这里是下载<a href="https://nginx.org/en/download.html">链接</a>，下载界面如下，我下载的是稳定版本的呃。</p>
-<p><img src="/C:/Users\ouSt\AppData\Roaming\Typora\typora-user-images\image-20220216154414596.png" alt="image-20220216154414596"></p>
+<p><img src="/2022/02/16/Nginx%E6%93%8D%E4%BD%9C%E9%85%8D%E7%BD%AE/Users/ouSt\AppData\Roaming\Typora\typora-user-images\image-20220216154414596.png" alt="image-20220216154414596"></p>
 <p>##content<br>there is sth<br>#end</p>
 ]]></content>
   </entry>
@@ -499,31 +499,6 @@
 <h2 id="四、loader样式打包"><a href="#四、loader样式打包" class="headerlink" title="四、loader样式打包"></a>四、loader样式打包</h2>]]></content>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2022/07/18/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>jwt基础操作</title>
-    <url>/2022/02/15/jwt/</url>
-    <content><![CDATA[<h2 id="jwt"><a href="#jwt" class="headerlink" title="jwt"></a>jwt</h2><p>jwt json–web–token</p>
-<p>我做过了更改了</p>
-]]></content>
-  </entry>
-  <entry>
     <title>GitHub操作文档</title>
     <url>/2022/02/15/github%E6%93%8D%E4%BD%9C%E6%96%87%E6%A1%A3/</url>
     <content><![CDATA[<h2 id="一、基础操作"><a href="#一、基础操作" class="headerlink" title="一、基础操作"></a>一、基础操作</h2><h3 id="1、克隆远端文件"><a href="#1、克隆远端文件" class="headerlink" title="1、克隆远端文件"></a>1、克隆远端文件</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">git clone</span><br></pre></td></tr></table></figure>
@@ -582,15 +557,29 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo</title>
-    <url>/2022/07/20/test/</url>
-    <content><![CDATA[<p>#quick start</p>
-<img class=".png [img]">
-<p>##content<br>there is sth<br>#end</p>
+    <title>Hello World</title>
+    <url>/2022/07/18/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-      <tags>
-        <tag>123</tag>
-      </tags>
+  </entry>
+  <entry>
+    <title>jwt基础操作</title>
+    <url>/2022/02/15/jwt/</url>
+    <content><![CDATA[<h2 id="jwt"><a href="#jwt" class="headerlink" title="jwt"></a>jwt</h2><p>jwt json–web–token</p>
+<p>我做过了更改了</p>
+]]></content>
   </entry>
   <entry>
     <title>VUE-CLI</title>
@@ -633,7 +622,7 @@
 <p>如果需要将两个或多个路径都指向一个组件内容，可以用重定向redirect </p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">routes: [</span><br><span class="line">&#123;</span><br><span class="line">  path: &#x27;/&#x27;,redirect:&#x27;/home&#x27;//像这样,路径&#x27;/&#x27;和&#x27;/home&#x27;都会指向/home,显示HellowzWorld</span><br><span class="line">&#125;,</span><br><span class="line">&#123;</span><br><span class="line">  path:&#x27;/home&#x27;,</span><br><span class="line">  name: &#x27;HelloWorld&#x27;,</span><br><span class="line">  component: HelloWorld</span><br><span class="line">&#125;,</span><br><span class="line">]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p><img src="/C:/Users\ouSt\AppData\Roaming\Typora\typora-user-images\image-20220128102033954.png" alt="image-20220128102033954"></p>
+<p><img src="/2022/02/15/vue-cli/Users/ouSt\AppData\Roaming\Typora\typora-user-images\image-20220128102033954.png" alt="image-20220128102033954"></p>
 <h5 id="4-2-1-引用其他组件–通过路由方式"><a href="#4-2-1-引用其他组件–通过路由方式" class="headerlink" title="4.2.1 引用其他组件–通过路由方式"></a>4.2.1 引用其他组件–通过路由方式</h5><p>在App.vue的template中加入<router-view> 表示要引用这个路由下的内容，这个只能在根路径下使用，因为其他路径下已经规定好了router</router-view></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div id=&quot;app&quot;&gt;</span><br><span class="line">    &lt;img src=&quot;./assets/logo.png&quot;&gt;</span><br><span class="line">    &lt;router-view/&gt; </span><br><span class="line"></span><br><span class="line">    &lt;Footer&gt;&lt;/Footer&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
 
@@ -672,6 +661,17 @@
 ]]></content>
       <tags>
         <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo</title>
+    <url>/2022/07/20/test/</url>
+    <content><![CDATA[<p>#quick start</p>
+<img src="/2022/07/20/test/img.png" class title="img">
+<p>##content<br>there is sth<br>#end</p>
+]]></content>
+      <tags>
+        <tag>123</tag>
       </tags>
   </entry>
 </search>
